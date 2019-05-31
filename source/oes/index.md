@@ -1,6 +1,7 @@
 ---
 title: Object Event Modeling And Simulation
 ---
+<main>
 <aside>
 <h3>Papers</h3>
 	 <dl style="padding-left:0"><dt>OEM</dt>
@@ -75,4 +76,3 @@ In OEM, the state structure of a system can be modeled with UML Class Diagrams d
 	<li>Various <em>user interface (UI)</em> definitions, e.g. a UI for defining the initial state or a UI for defining the form of visualization</li>
 </ul>
 </main>
-</div>
