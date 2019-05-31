@@ -1,3 +1,4 @@
+{% raw %}
 <div id="between-head-and-foot">
   <main>
    <section class="description"><h1>Web-Based Simulation for Science and Education</h1>
@@ -92,3 +93,4 @@
    </ul>
   </aside>
  </div>
+ {% endraw %}
