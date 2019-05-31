@@ -1,0 +1,103 @@
+$extrasmall: 400px;
+$small: 700px;
+$medium: 900px;
+$large: 1200px;
+§xlarge: 1800px;
+§xxlarge: 3000px;
+
+if $russian {
+	$extrasmall: 400px;
+	$small: 700px;
+	$medium: 900px;
+	$large: 1200px;
+	§xlarge: 1800px;
+	§xxlarge: 3000px;
+}
+if $chinese {
+	$extrasmall: 400px;
+	$small: 700px;
+	$medium: 900px;
+	$large: 1200px;
+	§xlarge: 1800px;
+	§xxlarge: 3000px;
+}
+
+/*Ansicht bis 400px*/
+@media (max-width: 399px) {
+ header {padding:5px;}
+ header img {float:left;max-width:60%;max-height:60px;}
+ nav {max-width:30%;left:auto;margin-top:5px;padding:0px 40px 40px 0px;}
+ nav#menu:target {position:relative;background:transparent;width:100%;max-width:100%;}
+ nav li:first-child {font-size:0px;}		/* Hide first element */
+ nav li:first-child:hover {background:transparent;}
+ nav#menu:target li:first-child {font-size: 1em;}			/* Fade in while navigation open */
+ .sim-category, aside {float:none;width:100%;}
+ #slogan {display:none;}
+}
+
+/*View above 400px*/
+@media (min-width: 400px) { 
+ header {padding:10px 20px 10px 20px;}
+ header img {max-width:70%;float:left;max-height:50px;} 
+ nav {max-width:100%;padding:5px 40px 0px 0px;margin-right:10px;right:auto;} 
+ nav#menu:target {position:relative;background: transparent;width:100%;max-width:100%;}
+ #language{margin:5px;padding-bottom:10px;}
+ .sim-category, aside {float:none;width:100%;}
+ #slogan {display:none;}
+}
+
+/*View above 700px*/
+@media (min-width: 700px) { 
+ header img {max-width:30%;width:30%;max-height:60px;float:left;} 
+ nav {position:relative;float:right;max-width:65%;padding:0px 40px 0px 0px;} 
+ #language{width:40%}
+ label {float:right;}
+ nav#menu:target {position:absolute;background: #eee;width:auto;}
+}
+
+/*View above 900px*/
+@media (min-width: 900px) {
+  header {padding:10px 40px 10px 40px;}
+ nav {position:relative;float:right;max-width:65%;padding:5px 40px 0px 0px;margin-right:10px;} 
+ aside h1, nav, .description h1{font-size:110%}
+ #between-head-and-foot {display: flex;}
+ aside {order: 1;width: 25%;}
+ #language{width:13%}
+ #slogan {display:block;float:left; margin:5px; font-size:0.9em; font-weight:bold;max-width:65%;text-transform:uppercase; color:#666;text-align:center;}
+}
+
+/*View above 1200px*/
+@media (min-width: 1200px) {
+ nav {padding:0px 0px 50px 0px;}
+ header img {max-height:80px;} 
+ nav{margin-top:10px;}
+ .sim-category a, aside li, section.sim-category > h1,p,dt,dd  {font-size:110%}
+ nav, aside h1, .description h1 {font-size:120%}
+ section.description > div {columns: 2;}
+ aside {width: 20%;}
+ #slogan {font-size:1.1em;margin: 10px 30px 10px 30px;}
+}
+
+/*View above 1800px*/
+@media (min-width: 1800px) {
+ header img {max-height:100px;} 
+ nav {padding-right:0px;}
+ aside, #language, ection.sim-category > h1,p,dt,dd, {font-size:130%}
+ nav, .description h1,h1 {font-size:170%}
+ #language svg{width:25px;}
+ body img {width:20%;}
+ #slogan {font-size:1.5em;width:55%;} 
+}
+
+/*View above 3000px*/
+@media (min-width: 3000px) {
+ header img {max-height:150px;} 
+ nav{height:70px;}
+ nav li:nth-last-child(1) {display: none;}
+ nav, .description h1,h1 {font-size:250%}
+ aside, section.sim-category > h1,p,dt,dd,#language  {font-size:200%}
+ #language svg{width:40px;}
+ #slogan {font-size:3em;margin: 10px 50px 10px 50px;width:60%} 
+
+}
+
