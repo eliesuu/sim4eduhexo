@@ -2,7 +2,7 @@
 title: Object Event Modeling And Simulation
 ---
 <aside>
-	 <h3>Papers</h3>
+<h3>Papers</h3>
 	 <dl style="padding-left:0"><dt>OEM</dt>
 		<dd>Gerd Wagner. <a href="https://articles.jsime.org/1/1/">Information and Process Modeling for Simulation – Part I: Objects and Events</a>. <em>Journal of Simulation Engineering</em> 1:1, 2018.</dd>
 		<dt>OES</dt>
@@ -74,3 +74,5 @@ In OEM, the state structure of a system can be modeled with UML Class Diagrams d
 	<li>A <em>user interaction</em> definition for making simulation games</li>
 	<li>Various <em>user interface (UI)</em> definitions, e.g. a UI for defining the initial state or a UI for defining the form of visualization</li>
 </ul>
+</main>
+</div>
