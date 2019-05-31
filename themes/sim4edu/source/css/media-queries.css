@@ -1,27 +1,3 @@
-$extrasmall: 400px;
-$small: 700px;
-$medium: 900px;
-$large: 1200px;
-§xlarge: 1800px;
-§xxlarge: 3000px;
-
-if $russian {
-	$extrasmall: 400px;
-	$small: 700px;
-	$medium: 900px;
-	$large: 1200px;
-	§xlarge: 1800px;
-	§xxlarge: 3000px;
-}
-if $chinese {
-	$extrasmall: 400px;
-	$small: 700px;
-	$medium: 900px;
-	$large: 1200px;
-	§xlarge: 1800px;
-	§xxlarge: 3000px;
-}
-
 /*Ansicht bis 400px*/
 @media (max-width: 399px) {
  header {padding:5px;}
