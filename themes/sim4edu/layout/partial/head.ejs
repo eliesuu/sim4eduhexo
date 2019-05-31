@@ -1,0 +1,81 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Sim4edu - Web-Based Simulation for Science and Education</title>
+    <script src="s4e.js"></script>
+    <script>
+        var accessURL = new URL( window.location.href),accessLang = accessURL.searchParams.get("lang");
+        var userLangFam = s4e.getUserLanguage().substring(0,2);
+        if (accessLang) {
+            accessLang = accessLang.substring(0,2);
+            if (accessLang !== "en" && s4e.supportedLangFamilies.includes( accessLang)) {
+                window.location = "./" + accessLang + "/index.html";
+            }
+        } else {
+            // switch to user language family if it is not "en" and supported
+            if (userLangFam !== "en") {  // not an "en" locale
+                if (s4e.supportedLangFamilies.includes( userLangFam)) {
+                    window.location = "./" + userLangFam + "/index.html";
+                }
+            }
+        }
+        </script> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="Content-Language" content="en"/>
+    <meta name="description" content="The Simulation for Education (sim4edu.com) project website supports web-based simulation with open source technologies for science and education. It provides both simulation technologies and a library of educational simulations." />
+    <!-- Facebook Open Graph annotations -->
+    <meta property="og:site_name" content="Sim4edu"/>
+    <meta property="og:title" content="Sim4edu - Web-Based Simulation for Science and Education"/>
+    <meta property="og:locale" content="en" />
+    <meta property="og:locale:alternate" content="zh_Hans" />
+    <meta property="og:locale:alternate" content="de" />
+    <meta property="og:description" content="The Simulation for Education (sim4edu.com) project website supports web-based simulation with open source technologies for science and education. It provides both simulation technologies and a library of educational simulations."/>
+    <meta property="og:url" content="https://sim4edu.com"/>
+    <meta property="og:image" content="https://sim4edu.com/img/sim4edu.png"/>  <!-- recommended 1200 x 630 --> 
+    <!-- Google annotations -->
+    <script type="application/ld+json">{
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Brandenburg University of Technology",
+                    "logo": "https://www.b-tu.de/fileadmin/btu-cs/images/logo/BTULogo_englisch_grau.png"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Gerd Wagner",
+                    "image": {
+                        "@type": "ImageObject",
+                        "url": "https://ari123.com/media/img/GW.jpg",
+                        "width": 230,
+                        "height": 230
+                    },
+                    "url": "https://www.linkedin.com/in/gerdwagner/",
+                    "sameAs": []
+                },
+                "url": "https://sim4edu.com/",
+                "datePublished": "2018-05-04T00:00:00.000Z",
+                "dateModified": "2019-02-18T14:35:00.000Z",
+                "image": {
+                    "@type": "ImageObject",
+                    "url": "https://sim4edu.com/img/sim4edu.svg",
+                    "width": 1200,
+                    "height": 292
+                },
+                "keywords": "simulation, online simulation, web-based simulation, javascript-based simulation, educational simulation, instructional simulation, simulation education",
+                "description": "The Simulation for Education (sim4edu.com) project website supports web-based simulation with open source technologies for science and education. It provides both simulation technologies and a library of educational simulations."
+            }
+        </script>  
+    <link rel="icon" type="image/png" href="https://sim4edu.com/img/icon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://sim4edu.com/img/icon-16x16.png" sizes="16x16">
+    <!-- Global site tag (gtag.js) - Google Analytics
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98612205-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-98612205-1', {'anonymize_ip':true});
+            </script>
+            -->
+    <%- css(['css/ant.css', 'css/basic-styles.css', 'css/normalize.css', 'css/page.css', 'css/prio-menu.css', 'css/media-queries.css']) %> 
+</head> 
