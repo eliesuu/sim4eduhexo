@@ -1,5 +1,5 @@
 ---
-title: oes
+title: Object Event Modeling And Simulation
 ---
  <div id="between-head-and-foot">
   <main>

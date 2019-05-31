@@ -1,6 +1,4 @@
 {% raw %}
-<div id="between-head-and-foot">
-  <main>
    <section class="description"><h1>Web-Based Simulation for Science and Education</h1>
     <div>
      <p>The <em>Simulation for Education (Sim4edu</em>) project website supports web-based simulation
@@ -91,6 +89,4 @@
     <li>9-May-2018: OESjs 1.3a has been released. It allows defining simulation experiments and runs faster due to running the simulator in its own (worker) thread.</li>
     <li>4-May-2018: The Sim4edu website has moved to Netlify</li>
    </ul>
-  </aside>
- </div>
  {% endraw %}
