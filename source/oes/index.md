@@ -1,7 +1,6 @@
 ---
 title: Object Event Modeling And Simulation
 ---
-<main>
 <aside>
 <h3>Papers</h3>
 	 <dl style="padding-left:0"><dt>OEM</dt>
