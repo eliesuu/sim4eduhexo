@@ -1,3 +1,4 @@
+<main>
 <section class="description"><h1>Web-Based Simulation for Science and Education</h1>
 <div>
      <p>The <em>Simulation for Education (Sim4edu</em>) project website supports web-based simulation
