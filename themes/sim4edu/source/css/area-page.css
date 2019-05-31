@@ -1,0 +1,66 @@
+main {
+  max-width: 44em;
+  margin: 1em auto;
+}
+main > aside {
+  margin-top: 0.8em;
+  margin-bottom: 0.4em;
+  margin-left: 0.8em;
+  padding:5px; 
+  border: 1px solid; 
+  float: right;
+  width: 40%; 
+}
+main > section {
+  margin-bottom: 0.8em;
+}
+main > section > h1 {
+  font-size: 1.7em;
+  margin-bottom: 0.2em;
+}
+main > section > section > h1 {
+  font-size: 1.5em;
+  margin-bottom: 0.2em;
+}
+.smallprint {
+  font-size: smaller;
+}
+/*
+ * Tables
+ */
+table[border="1"] {
+    border-collapse: collapse;
+    border: 1px solid #808080;
+	margin: 1.5em auto; 
+}
+table[border="1"] thead {
+    background-color: #E0E0E0;
+}
+table[border="1"] th,
+table[border="1"] td {
+    border: 1px solid #808080;
+    padding: 0.33em;
+}
+table[border="1"] tbody th,
+table[border="1"] td {
+    vertical-align: baseline;
+}
+/*
+ * Figures
+ */
+figure {
+    text-align: center;
+	margin: 1.5em auto; 
+}
+caption,
+figcaption {
+    text-align: center;
+    font-style: italic;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#page-title {
+   max-width:100%;
+   width:100%;
+}
