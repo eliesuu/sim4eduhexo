@@ -61,29 +61,6 @@ oes.loadManager = {
     // NOTE: used by OES team to develop the framework and example simulation scenarios
     frameworkDev: {
       basePath: "../../../../",
-      coreCssSrc: [
-        "../cLASSjs/css/vIEW.css",
-        "css/OESjs.css"
-      ],
-      coreJsSrc: [
-        "../cLASSjs/lib/browserShims.js",
-        "../cLASSjs/lib/errorTypes.js",
-        "../cLASSjs/lib/util.js",
-        "../cLASSjs/lib/dom.js",
-        "../cLASSjs/src/eNUMERATION.js",
-        "../cLASSjs/src/cLASS.js",
-        "../cLASSjs/src/oBJECTvIEW.js",
-
-        "lib/dom-additions.js",
-        "lib/svg.js",
-        "lib/rand.js",
-
-        "src/v1/OES.js",
-        "src/v1/ClientLogger.js",
-        "src/v1/EventList.js",
-        "src/v1/statistics.js",
-        "src/v1/simulator.js",
-        "src/ui/simulatorUI.js"],
       coreSpace: [
         "src/space/space.js",
         "src/space/ObjectInOneDimSpace.js",
