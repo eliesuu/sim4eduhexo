@@ -14,7 +14,7 @@ layout: sims
  </div>
 </main>
 <noscript>
- <p>Please turn on JavaScript in your browser. Otherwise you cannot run Sim4edu simulations.</p>
+ <p>Please turn on JavaScript in your browser. Otherwise you cannot run Sim4edu simulationss.</p>
 </noscript>
 <%- js(['../../../themes/sim4edu/source/js/metadata.js', '../framework/frontMatter.js', '../framework/simulator-core.js', '../framework/chartist.js', '../loadManager.js']) %>
 <script src="../../../themes/sim4edu/source/js/metadata.js"></script>
