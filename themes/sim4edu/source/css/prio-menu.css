@@ -27,7 +27,6 @@ nav li:last-child {
 	right: 0;
 	margin-right: -40px;
 	bottom: 40px;
-	background-image: black;
 }
 
 nav li:nth-last-child(2) { 
