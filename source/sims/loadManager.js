@@ -62,7 +62,6 @@ oes.loadManager = {
     frameworkDev: {
       basePath: "../../../../",
       coreCssSrc: [
-        "../cLASSjs/css/normalize.css",
         "../cLASSjs/css/vIEW.css",
         "css/OESjs.css"
       ],
