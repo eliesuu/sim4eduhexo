@@ -16,4 +16,4 @@ layout: sims
 <noscript>
  <p>Please turn on JavaScript in your browser. Otherwise you cannot run Sim4edu simulations.</p>
 </noscript>
-<%- js(['../../../themes/sim4edu/source/js/metadata.js']) %>
+<%- js(['../../themes/sim4edu/source/js/metadata.js']) %>
