@@ -16,12 +16,12 @@ layout: sims
 <noscript>
  <p>Please turn on JavaScript in your browser. Otherwise you cannot run Sim4edu simulations.</p>
 </noscript>
-<script src="../../themes/sim4edu/source/js/metadata.js"></script>
-<script src="../../themes/sim4edu/source/js/framework/frontMatter.js"></script>
+<script src="../../js/metadata.js"></script>
+<script src="../../js/framework/frontMatter.js"></script>
 <!-- load common core JS code files -->
-<script src="../../themes/sim4edu/source/js/framework/simulator-core.js" async="async"></script>
-<script src="../../themes/sim4edu/source/js/framework/chartist.js" async="async"></script>
+<script src="../../js/framework/simulator-core.js" async="async"></script>
+<script src="../../js/framework/chartist.js" async="async"></script>
 <!-- load scenario.js and all files required by it, and set up the user interface -->
-<script src="../../themes/sim4edu/source/js/loadManager.js"></script>
+<script src="../../js/loadManager.js"></script>
 
 
