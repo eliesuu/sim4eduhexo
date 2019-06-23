@@ -17,7 +17,7 @@ layout: sims
  <p>Please turn on JavaScript in your browser. Otherwise you cannot run Sim4edu simulations.</p>
 </noscript>
 <%- js(['metadata.js', '../framework/frontMatter.js', '../framework/simulator-core.js', '../framework/chartist.js', '../loadManager.js']) %>
-<script src="metadata.js"></script>
+<script src="../../../themes/sim4edu/source/js/metadata.js"></script>
 <script src="../framework/frontMatter.js"></script>
 <!-- load common core JS code files -->
 <script src="../framework/simulator-core.js" async="async"></script>
