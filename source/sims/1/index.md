@@ -16,7 +16,6 @@ layout: sims
 <noscript>
  <p>Please turn on JavaScript in your browser. Otherwise you cannot run Sim4edu simulations.</p>
 </noscript>
-
-<script src="../../js/loadManager.js"></script>
+<script src="../../js/hallowelt.js"></script>
 
 
