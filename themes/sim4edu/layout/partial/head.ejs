@@ -81,10 +81,10 @@
         <%- css(['css/normalize.css', 'css/basic-styles.css', 'css/area-page.css', 'css/prio-menu.css', 'css/media-queries.css']) %> 
     <%} else {%>
         <% if (page.layout==='sims')  { %>
-            <%- css(['css/prio-menu.css', 'css/media-queries.css', 'css/sims/simulator-core.css', 'css/sims/chartist.css']) %> 
+            <%- css(['css/normalize.css', 'css/basic-styles.css', 'css/prio-menu.css', 'css/media-queries.css', 'css/sims/simulator-core.css', 'css/sims/chartist.css']) %> 
         <%} else {%>  
             <% if (page.layout==='description')  { %>
-                <%- css(['css/prio-menu.css', 'css/media-queries.css', 'css/sims/description.css']) %> 
+                <%- css(['css/normalize.css', 'css/basic-styles.css', 'css/prio-menu.css', 'css/media-queries.css', 'css/sims/description.css']) %> 
 
             <%} else {%>   
                 <%- css(['css/ant.css', 'css/normalize.css', 'css/basic-styles.css', 'css/start-page.css', 'css/prio-menu.css', 'css/media-queries.css']) %> 
