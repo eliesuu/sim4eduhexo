@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>DriveThru-1 Object Event Simulation Description</title>
+  <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
+  <link rel="stylesheet" href="../framework/description.css" />
+  <script src="metadata.js"></script>
+  <script src="../framework/description.js"></script>
+</head>
+<body onload="oes.ui.setupDescription()">
+ <div id="frontMatter">
+   <h1><span>Drive Through Restaurant</span>
+     <a href="index.html">Back to simulation</a></h1>
+  <p><strong>Classification tags</strong>: business operations management, DES, next-event time progression, activity-based process modeling</p>
+  <p>Other OES models for the same system/problem/domain: <a href="../001-ServiceDesk-1/index.html">ServiceDesk-1</a> | <a href="../002-ServiceDesk-2/index.html">ServiceDesk-2</a></p>
+  <figure class="right"><img src="media/img/theme-image.png" alt="" width="361" height="256" /></figure>
+  <section id="shortDescription"></section>
+ </div>
+
+ <section class="mbd collapsed"><h1><span>►</span>Conceptual Model <sup class="expl-req">?</sup></h1>
+   <div id="expl-CM" class="expl"></div>
+
+   <section><h1>Conceptual Information Model <sup class="expl-req">?</sup></h1>
+     <div id="expl-CIM" class="expl"></div>
+     <p>There are three order processing activities: the order taking, the order preparation and the order pickup,
+       all of which are performed by business units that have queues: the menu board for order taking, the
+       kitchen for order preparation and the pickup window for picking up orders.</p>
+     <p>The potentially relevant object types are:</p>
+<!--
+     <figure class="right-float">
+       <img src="CIM-ObjT.svg" width="450"/>
+       <figcaption>A conceptual model describing object types.</figcaption>
+     </figure>
+-->
+     <ol>
+       <li>customers,</li>
+       <li>business units: menu board, kitchen, pickup window</li>
+       <li>service personnel: order taker, cook, pickup window staff</li>
+     </ol>
+     <p>Potentially relevant types of events are:</p>
+     <ol>
+       <li>customer arrivals,</li>
+       <li>customers queuing up at the order window,</li>
+       <li>order taking,</li>
+       <li>order preparation,</li>
+       <li>customers queuing up at the pickup window,</li>
+       <li>order pickups,</li>
+       <li>customer departures.</li>
+     </ol>
+     <p>Notice that <i>order taking</i>, <i>order preparations</i> and <i>order pickups</i> are
+       <i><b>activities</b></i>, which consist of a start and an end event.</p>
+<!--
+     <p>Both object types and event types, with their participation associations, can be visually described
+       in a UML class diagram, as shown below.</p>
+     <figure>
+       <img src="media/img/CIM.svg" width="600"/>
+       <figcaption>A conceptual information model describing object types and event types.</figcaption>
+     </figure>
+-->
+   </section>
+
+   <section>
+     <h1>Conceptual Process Model <sup class="expl-req">?</sup></h1>
+     <div id="expl-CPM" class="expl"></div>
+     <table>
+       <caption>Event rules.</caption>
+       <thead>
+       <tr>
+         <td>ON (event type)</td><td>DO (event routine)</td>
+       </tr>
+       </thead>
+       <tbody>
+       <tr>
+         <td>customer arrival</td>
+         <td>If the order window is busy, then the newly arrived customer queues up, else a new
+           order taking activity for this customer starts.</td>
+       </tr>
+       <tr>
+         <td>end of order taking activity</td>
+         <td>If the pickup window is busy, then the customer queues up, else a new
+           order pickup activity for this customer starts. If there are still customers waiting
+           in the menu board queue, the next order taking activity starts.
+         </td>
+       </tr>
+       <tr>
+         <td>end of pickup activity</td>
+         <td>The served customer departs. If there are still customers waiting in the pickup window
+           queue, the next pickup activity starts.
+         </td>
+       </tr>
+       </tbody>
+     </table>
+<!--
+     <figure>
+       <img src="media/img/CPM.svg" width="800"/>
+       <figcaption>A conceptual process model describing the conditional succession of events and activities.</figcaption>
+     </figure>
+-->
+   </section>
+ </section>
+
+ <section class="mbd collapsed"><h1><span>►</span>Simulation Design Model <sup class="expl-req">?</sup></h1>
+   <div id="expl-DM" class="expl"></div>
+
+   <section><h1>Information Design Model <sup class="expl-req">?</sup></h1>
+     <div id="expl-IDM" class="expl"></div>
+     <p>A computational design for the purpose of computing the two statistics <i>maximum queue length</i>
+       and <i>utilization</i> is obtained by modeling the following types of objects, events and activities:</p>
+  <ul>
+    <li>Four object types:
+      <ol>
+        <li><b><code>MenuBoard</code></b> with a (multi-valued) reference property <code>waitingCustomers</code>
+          representing its queue, and two reference properties <code>kitchen</code> and <code>pickupWindow</code>
+          for enabling the menu board to access the queues of the kitchen and the pickup window.</li>
+        <li><b><code>Kitchen</code></b> with a (multi-valued) reference property <code>waitingOrders</code>
+          representing its queue, a multi-valued reference property <code>preparedOrders</code> representing
+          the set of prepared orders and a reference property <code>menuBoard</code> for enabling the kitchen
+          to access the queue of the menu board.</li>
+        <li><b><code>PickupWindow</code></b> with two multi-valued reference properties <code>waitingCustomers</code>
+          representing its queue and <code>preparedOrders</code> representing the set of prepared orders, and a
+          reference property <code>menuBoard</code> for enabling the kitchen to access the queue of the menu board.</li>
+        <li><b><code>Customer</code></b> with an attribute <code>arrivalTime</code> for recording the customer's
+          arrival time such that the <i>time in system</i> can be computed.</li>
+      </ol></li>
+    <li>One event type: <b><code>CustomerArrival</code></b> with a reference property <code>orderWindow</code>
+      having the class <code>OrderWindow</code> as range. As an exogenous event type, <code>CustomerArrival</code>
+      has a <code>recurrence</code> function representing a random variable for computing the time in-between
+      two subsequent event occurrences.</li>
+    <li>Three activity types:
+      <ol>
+        <li><b><code>OrderTaking</code></b> has a resource association with the object type
+          <code>MenuBoard</code> and a <code>randomDuration</code> function.</li>
+        <li><b><code>OrderPreparation</code></b> has a resource association with <code>Kitchen</code>
+          and a <code>randomDuration</code> function.</li>
+        <li><b><code>OrderPickup</code></b> has a resource association with <code>PickupWindow</code>
+          and a <code>randomDuration</code> function.</li>
+      </ol></li>
+  </ul>
+     <p>For all activity types the simulator computes the utilization of their resources.</p>
+<!--
+     <p>The object types, event types and activity types described above, together with their participation
+       associations, are visually described in the following UML class diagram:</p>
+     <figure>
+       <img src="media/img/IDM.svg" width="600"/>
+       <figcaption>An information design model describing object types and event types.</figcaption>
+     </figure>
+-->
+   </section>
+   <section><h1>Process Design Model <sup class="expl-req">?</sup></h1>
+     <div id="expl-PDM" class="expl"></div>
+     <table>
+       <caption>Event rule design table.</caption>
+       <thead>
+       <tr>
+         <td>ON (event type)</td><td>DO (event routine)</td>
+       </tr>
+       </thead>
+       <tbody>
+       <tr>
+         <td>CustomerArrival( ow) @ t</td>
+         <td>
+           INCREMENT ow.queueLength<br/>
+           IF ow.queueLength = 1<br/>
+           THEN SCHEDULE ActivityStart("OrderTaking", ow) @ (t+1)
+         </td>
+       </tr>
+       <tr>
+         <td>ActivityEnd("OrderTaking", a) @ t</td>
+         <td>
+           SET cust = POP( a.orderWindow.waitingCustomers)<br/>
+           SET ordPrepDuration = OrderPreparationEnd.randomDuration()<br/>
+           SET pickupWindowQueue = a.orderWindow.pickupWindow.waitingCustomers<br/>
+           SCHEDULE OrderPreparationEnd( cust.orderNo) @ (t + ordPrepDuration)<br/>
+           PUSH cust TO pickupWindowQueue<br/>
+           IF pickupWindowQueue.size = 1<br/>
+           THEN SCHEDULE ActivityStart("OrderPickup", a.orderWindow.pickupWindow) @ (t+1)<br/>
+           IF a.orderWindow.waitingCustomers.size > 0<br/>
+           THEN SCHEDULE ActivityStart("OrderTaking", a.orderWindow) @ (t+1)
+         </td>
+       </tr>
+       <tr>
+         <td>ActivityEnd("OrderPreparation", a) @ t</td>
+         <td>
+           SET pickupWindow = a.kitchen.pickupWindow<br/>
+           SET orderNo = POP( a.kitchen.waitingOrders)<br/>
+           pickupWindow.preparedOrders.add( ordNo)<br/>
+           PUSH orderNo TO pickupWindow.preparedOrders
+         </td>
+       </tr>
+       <tr>
+         <td>ActivityEnd("OrderPickup", a) @ t</td>
+         <td>
+           SET cust = POP( a.pickupWindow.waitingCustomers)<br/>
+           IF a.pickupWindow.waitingCustomers.size > 0<br/>
+           THEN SCHEDULE ActivityStart("OrderPickup", a.pickupWindow) @ (t+1)
+         </td>
+       </tr>
+       </tbody>
+     </table>
+   </section>
+ </section>
+ <p><a href="index.html">Back to simulation</a></p>
+</body>
+</html>
+

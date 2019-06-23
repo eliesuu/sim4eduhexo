@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <title>LemonadeStand-2 Object Event Simulation Description</title>
+  <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
+  <link rel="stylesheet" href="../framework/description.css" />
+  <script src="metadata.js"></script>
+  <script src="../framework/description.js"></script>
+</head>
+<body onload="oes.ui.setupDescription()">
+ <div id="frontMatter">
+  <h1><span>A Lemonade Stand as a Manufacturing Company in a Monopoly Market Dominated by Weather Conditions</span>
+   <a href="index.html">Back to simulation</a></h1>
+  <p><strong>Classification tags</strong>: business operations management, DES, next-event time progression</p>
+  <figure class="right"><img src="img/mineral-water-lime-ice-mint-320x213-CC0.jpeg" alt="Lemonade" width="320" height=""213 /></figure>
+  <section id="shortDescription"></section>
+ </div>
+ <section class="collapsed"><h1><span>►</span>Background</h1>
+     <p>The Lemonade Stand game allows active learning of the following topics:</p>
+     <ol>
+         <li><details id="PED"><summary>Price Elasticity of Demand</summary>
+             <p>The <em>Price Elasticity of Demand (PED)</em> is a measure used to show the responsiveness, or elasticity, of the quantity demanded
+                 of a good or service to a change in its price. More precisely, it gives the percentage change in quantity demanded in response to
+                 a one percent change in price (ceteris paribus, i.e. holding constant all the other determinants of demand, such as income).
+                 In general, the demand for a good is said to be inelastic when the PED is less than one (in absolute value): that is,
+                 changes in price have a relatively small effect on the quantity of the good demanded. The demand for a good is said to be
+                 elastic when its PED is greater than one (in absolute value): that is, changes in price have a relatively large effect
+                 on the demand quantity of a good.</p>
+         </details></li>
+         <li><details><summary>Sales Price Planning</summary>
+             <p>Normally, price planning is based on full costs per product unit, which are computed as fixed costs (mainly labor, and, e.g., depreciation
+                 on assets and marketing costs) plus variable costs (mainly input materials). In <em>cost-plus pricing</em>, the product price <i>p</i> is planned by adding
+                 a proportional profit to the costs <i>c</i>: <i>p</i> = <i>c</i> + <i>rc</i>  where <i>r</i> is the planned profit rate.</p>
+             <p>During favorable market conditions, full costs could be used for cost-plus pricing, while during periods of poor sales (e.g., due to increased competition),
+                 marginal costs may be used. The profit rate could be adapted when the <a href="#PED" title="Price Elasticity of Demand">PED</a> of the product is changing.
+                 For instance, the lemonade stand could increase its planned profit rate when the weather conditions are sunny and warm, because under such conditions
+                 the otherwise very price-elastic demand for lemonade gets more inelastic, thus allowing for price increases without affecting the demand.</p>
+         </details></li>
+         <li><details><summary>Demand Forecasting</summary>
+             <p>The demand of a new day can be forecasted on the basis of the previously recorded daily demand data, which forms a <em>time series</em>.
+                 The two most common forecasting methods for time series are the <em>Simple Moving Average</em> and the <em>Exponentially Weighted Moving Average</em>
+                 methods. See https://people.duke.edu/~rnau/411avg.htm. In the LemonadeStand-1 model, the Simple Moving Average method is used.</p>
+         </details></li>
+         <li><details><summary>Bill of Materials</summary>
+             <p>A <em>Bill of Materials (BoM)</em> defines the composition of a product in the form of a list of component items, each with a quantity,
+                 as required for assembling a production unit. In general, a component item may also have a BoM, i.e. be composed of other items, such that a nested
+                 composition tree is obatined.</p>
+             <p>In the case of a lemonade stand with lemonade as a product, the production unit imay be a 3.5 ltr pitcher of lemonade, so we may have the following BoM:</p>
+             <pre>{"Lemon": 3, "Water": 2.5, "IceCubes": 50, "Sugar": 0.3, "PaperCup": 1}</pre>
+         </details></li>
+         <li><details><summary>Production Planning</summary>
+             <p>The production quantity (in number of batches) is planned according to the demand forecast, but under the constraints of using the available
+                 input items from the inventory.</p>
+         </details></li>
+         <li><details><summary>Inventory Management</summary>
+             <small>Extracted from the Key Concepts Document of the MITx MicroMasters in Supply Chain Management course offered by
+                 the MIT Center for Transportation & Logistics.</small>
+             <p>There are many reasons for holding inventory including buffering against uncertainties in demand, supply, delivery and manufacturing.
+                 Having inventory allows for a smoother operation. There is, however, a problem with having too much inventory. Excess inventory can lead to
+                 spoilage and obsolescence. Also, spending too much on inventory limits the resources available for other activities and investments.
+                 Inventory analysis is essentially the determination of the right amount of inventory of the right product in the right location.
+                 On an operational level, a firm has to decide when to issue a replenishment order and how much to order. This requires a tactical decision
+                 about the replenishment policies for its inventories.</p>
+             <p>The two most important replenishment policies are:</p>
+             <dl>
+                 <dt><b>Periodic Review</b> with the parameters <em>reorder period</em> and <em>target inventory</em>.</dt>
+                 <dd>According to this policy, replenishment orders for filling the inventory up to the <em>target inventory</em> are issued periodically.
+                     The target inventory is obtained as the sum of the expected demand over the lead-time and reorder period plus the standard deviation of demand
+                     over lead-time and reorder period multiplied by a safety factor.</dd>
+                 <dt><b>Continuous Review</b> with the parameters <em>reorder point</em> and <em>order quantity</em>.</dt>
+                 <dd>According to this policy, a replenishment order is issued when the inventory level falls below the reorder point.
+                     The reorder point is obtained as the sum of the expected demand over the lead-time plus a safety stock, which is the standard deviation of demand over
+                     lead time multiplied by a safety factor.</dd>
+             </dl>
+             <p>Both policies make a trade-off between cost and <q>level of service</q>, which is a vague concept that can be operationalized in different ways.
+                 A common metric for the service level is the <em>Cycle Service Level (CSL)</em>, which is the probability that there will not be
+                 a stock out within a replenishment cycle. An inventory policy can be designed to minimize the costs while achieving an expected CSL
+                 of, say, 95%, which is one minus the probability of a stock out occurring.
+                 The total cost is the sum of purchase cost (per unit), order cost (per order),
+                 holding cost (per time unit) and shortage (or stock-out) cost (per event),
+                 which are the costs of not having an item in stock when it is ordered.</p>
+         </details></li>
+     </ol>
+ </section>
+
+ <!--
+ <section class="mbd collapsed"><h1><span>►</span>Conceptual Model <sup class="expl-req">?</sup></h1>
+   <div id="expl-CM" class="expl"></div>
+
+   <section><h1>Conceptual Information Model <sup class="expl-req">?</sup></h1>
+     <div id="expl-CIM" class="expl"></div>
+     <p>The potentially relevant object types are:</p>
+     <ol>
+       <li>customers,</li>
+       <li>lemonade stands,</li>
+       <li>suppliers.</li>
+     </ol>
+     <p></p>
+     <p>Potentially relevant types of events are:</p>
+     <ol>
+       <li>customer arrivals,</li>
+       <li>...,</li>
+     </ol>
+     <figure>
+       <img src="media/img/CIM.svg" width="600"/>
+       <figcaption>A conceptual information model describing object types and event types.</figcaption>
+     </figure>
+   </section>
+
+   <section>
+     <h1>Conceptual Process Model <sup class="expl-req">?</sup></h1>
+     <div id="expl-CPM" class="expl"></div>
+     <table>
+       <caption>Event rules.</caption>
+       <thead>
+       <tr>
+         <th>ON (event type)</th><th>DO (event routine)</th><th>Rule Diagram</th>
+       </tr>
+       </thead>
+       <tbody>
+       <tr>
+         <td>customer arrival</td>
+         <td>If the service desk is busy, then the new customer queues up,
+           else the service starts.</td>
+         <td><img src="media/img/Arrival_CRM.svg" width="250"/></td>
+       </tr>
+       </tbody>
+     </table>
+     <p>The involved types of events can be related with each other via their (possibly conditional) temporal succession,
+      as visualized in the following BPMN process diagram:</p>
+     <figure>
+       <img src="media/img/CPM.svg" width="600"/>
+       <figcaption>A conceptual process diagram integrating the event rule diagrams.</figcaption>
+     </figure>
+   </section>
+ </section>
+-->
+ <section class="mbd collapsed"><h1><span>►</span>Simulation Design Model <sup class="expl-req">?</sup></h1>
+   <div id="expl-DM" class="expl"></div>
+
+   <section><h1>Information Design Model <sup class="expl-req">?</sup></h1>
+     <div id="expl-IDM" class="expl"></div>
+      <p>The <em>LemonadeStand-2</em> model modifies and extends the <em>LemonadeStand-1</em> model by</p>
+      <ol>
+        <li><p>Adding <b>inventory</b> management:</p>
+         <ol><li>Adding the inventory management attributes <i>targetInventory</i>, <i>reorderPeriod</i> and <i>reorderPoint</i> to the <i>InputItemType</i> class.</li>
+          <li>Replacing the aggregate delivery event type <i>DailyDelivery</i> with <i>Delivery</i> such that a <i>Delivery</i> event represents a delivery
+            of a previously ordered quantity of a specific item. This implies the need to add a <i>DailyProduction</i> event type, since daily production
+            can no longer be performed in the context of a DailyDelivery event.</li>
+          </ol></li>
+        <li><p>Adding management of <b>perishable items</b>:</p>
+         <ol><li>Adding an attribute <i>expirationTimeSpan</i> to <i>ItemType</i>.</li>
+          <li>Adding an attribute <i>deliveryDate</i> to the <i>InputInventoryItem</i> class, such that the input inventory now consists of
+             several batches per item type, each with a delivery date, allowing to check for the expiration of items.</li>
+          <li>Taking care that a <i>Delivery</i> event creates a batch in the form of an <i>InputInventoryItem</i> instance.</li>
+         </ol></li>
+        <li><p>Adding a <b>generic market</b> model:</p>
+         <ol><li>Adding an object type <i>DailyDemandMarket</i> as an abstract class that defines a <code>getDailyDemandQuantity()</code> function
+          representing a random variable.</li>
+         <li>Adding an object type <i>ProductCategory</i> associated with <i>DailyDemandMarket</i>, such that companies are indirectly associated with a
+           daily demand market by their product type being associated with a product category, which is associated with a daily demand market</li>
+         <li>Setting the <i>DailyDemand</i> event's <code>quantity</code> attribute by invoking the <i>LemonadeMarket's</i>
+           <code>getDailyDemandQuantity()</code> function.</li>
+         </ol></li>
+        <li>Adding a <b>specific market</b> model by adding an object type <i>LemonadeMarket</i> as a concrete subclass of the abstract
+          <i>DailyDemandMarket</i> class, such that its <code>getDailyDemandQuantity()</code> function computes a daily demand quantity
+          on the basis of a weather model.</li>
+      </ol>
+       <p>These changes lead to the following information design model:</p>
+     <figure>
+       <img src="img/IDM.svg" width="800"/>
+       <figcaption>An information design model for the simulation of single product companies.</figcaption>
+     </figure>
+     <p>Notice how functions representing random variables, like <code>serviceDuration()</code> and <code>recurrence()</code>,
+       are marked with the keyword (or UML stereotype) «rv» standing for "random variable".</p>
+     <figure>
+       <img src="img/IDM-LemonadeMarket.svg" width="600"/>
+         <figcaption>Adding a specific market model for the simulation of lemonade stands.</figcaption>
+     </figure>
+   </section>
+   <section><h1>Process Design Model <sup class="expl-req">?</sup></h1>
+     <div id="expl-PDM" class="expl"></div>
+     <table>
+       <caption>Event rule design table.</caption>
+       <thead>
+       <tr>
+         <td>ON (event type)</td><td>DO (event routine)</td>
+       </tr>
+       </thead>
+       <tbody>
+       <tr>
+         <td>CustomerArrival( sd) @ t</td>
+         <td style="font-size:smaller">
+           INCREMENT sd.queueLength<br/>
+           IF sd.queueLength = 1<br/>
+           THEN SCHEDULE CustomerDeparture( sd) @ (t + sd.serviceDuration())
+         </td>
+       </tr>
+       </tbody>
+     </table>
+     <table>
+       <caption>From conceptual event rule models to rule design models.</caption>
+       <thead>
+        <tr><th>Conceptual rule models</th><th>Rule design models</th></tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td><img src="media/img/Arrival_CRM.svg" width="250"/></td>
+         <td><img src="media/img/Arrival_RDM.svg" width="450"/></td>
+        </tr>
+        <tr>
+         <td><img src="media/img/ServiceStart_CRM.svg" width="250"/></td>
+          <td rowspan="2"><img src="media/img/Departure_RDM.svg" width="450"/></td>
+        </tr>
+        <tr>
+         <td><img src="media/img/ServiceEnd_CRM.svg" width="250"/></td>
+        </tr>
+       </tbody>
+     </table>
+     <figure>
+       <img src="media/img/PDM.svg" width="700"/>
+       <figcaption>A process design model integrating both event rule design models.</figcaption>
+     </figure>
+   </section>
+ </section>
+
+ <section class="mbd collapsed"><h1><span>►</span>See also</h1>
+  <section><h1>Other OES Models for the Same System/Problem/Domain</h1>
+   <ol>
+     <!--
+     <li><a href="../001-ServiceDesk-1/index.html">ServiceDesk-1</a>: A service queue model
+       (one service and one queue) with two statistics: <i>maximum queue length</i> and <i>service utilization</i>.
+       The model abstracts away from individual customers and from the composition of the queue.</li>
+     -->
+     <li><a href="../002-ServiceDesk-2/index.html">ServiceDesk-2</a>: A service queue model
+       (one service and one queue) with one statistic: the Mean Response Time, which is the average length of time
+       a customer spends in the system from arrival to departure. For recording their arrival time, individual
+       customers are represented explicitly in a <i>waitingCustomers</i> queue.</li>
+   </ol>
+  </section>
+  <section><h1>Similar Models Implemented with Other Frameworks</h1>
+   <ol>
+     <li><a href="http://ccl.northwestern.edu/netlogo/models/community/Queueing_Simulation_Discrete_Event">Queueing_Simulation_Discrete_Event</a>: This NetLogo simulation uses NetLogo's tick-advance primitive to advance simulation time by non-integral amounts. However, NetLogo's standard ticks display is unable to display non-integral values, so a custom ticks display has to be programmed. Copyright 2010, Nick Bennett.</li>
+   </ol>
+  </section>
+ </section>
+ <p><a href="index.html">Back to simulation</a></p>
+</body>
+</html>
+

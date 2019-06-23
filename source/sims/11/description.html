@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <title>ProcessingNetwork-1 Object Event Simulation Description</title>
+  <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
+  <link rel="stylesheet" href="../framework/description.css" />
+  <script src="metadata.js"></script>
+  <script src="../framework/description.js"></script>
+</head>
+<body onload="oes.ui.setupDescription()">
+ <div id="frontMatter">
+   <h1><span>A Processing Network Model of Two Consecutive Services</span>
+     <a href="index.html">Back to simulation</a></h1>
+  <p><strong>Classification tags</strong>: business operations management, DES, next-event time progression, processing network model</p>
+  <figure class="right"><img src="media/img/theme-image.svg" alt="" width="240" /></figure>
+  <section id="shortDescription"></section>
+ </div>
+
+ <section class="mbd collapsed"><h1><span>►</span>Conceptual Model <sup class="expl-req">?</sup></h1>
+   <div id="expl-CM" class="expl"></div>
+
+   <section><h1>Conceptual Information Model <sup class="expl-req">?</sup></h1>
+     <div id="expl-CIM" class="expl"></div>
+     <p>The potentially relevant object types are:</p>
+<!--
+     <figure class="right-float">
+       <img src="CIM-ObjT.svg" width="450"/>
+       <figcaption>A conceptual model describing object types.</figcaption>
+     </figure>
+-->
+     <ol>
+       <li>customers,</li>
+       <li>service desks,</li>
+       <li>workObject waiting lines,</li>
+       <li>service clerks.</li>
+     </ol>
+     <p>Potentially relevant types of events are:</p>
+     <ol>
+       <li>workObject arrivals,</li>
+       <li>customers queuing up,</li>
+       <li>customers being notified/invited to move forward to the service desk,</li>
+       <li><i>receptions</i> and <i>case handlings</i>,</li>
+       <li>workObject departures.</li>
+     </ol>
+     <p>Notice that <i>receptions</i> and <i>case handlings</i> are <i><b>activities</b></i>,
+       which consist of a start and an end event.</p>
+     <p>Both object types and event types, with their participation associations, can be visually described
+       in a UML class diagram, as shown below.</p>
+     <figure>
+       <img src="media/img/CIM.svg" width="600"/>
+       <figcaption>A conceptual information model describing object types and event types.</figcaption>
+     </figure>
+   </section>
+
+   <section>
+     <h1>Conceptual Process Model <sup class="expl-req">?</sup></h1>
+     <div id="expl-CPM" class="expl"></div>
+     <table>
+       <caption>Event rules.</caption>
+       <thead>
+       <tr>
+         <td>ON (event type)</td><td>DO (event routine)</td>
+       </tr>
+       </thead>
+       <tbody>
+       <tr>
+         <td>workObject arrival</td>
+         <td>If the reception desk is busy, then the newly arrived workObject queues up, else a new
+           reception service for this workObject starts.</td>
+       </tr>
+       <tr>
+         <td>end of reception</td>
+         <td>If the case handling desk is busy, then the served workObject queues up, else a new
+           case handling service for this workObject starts. If there are still customers waiting
+           in the reception desk queue, the next reception service starts.
+         </td>
+       </tr>
+       <tr>
+         <td>end of case handling</td>
+         <td>The served workObject departs. If there are still customers waiting in the queue
+           of the case handling desk, the next case handling service starts.
+         </td>
+       </tr>
+       </tbody>
+     </table>
+     <figure>
+       <img src="media/img/CPM.svg" width="800"/>
+       <figcaption>A conceptual process model describing the conditional succession of events and activities.</figcaption>
+     </figure>
+   </section>
+ </section>
+
+ <section class="mbd collapsed"><h1><span>►</span>Simulation Design Model <sup class="expl-req">?</sup></h1>
+   <div id="expl-DM" class="expl"></div>
+
+   <p>In this model of the Department of Motor Vehicles, the two consecutive reception and
+     case handling activities are modeled as the activities of two different processing nodes,
+     using the standard modeling concepts of <i>Processing Networks</i>.</p>
+
+   <section><h1>Information Design Model <sup class="expl-req">?</sup></h1>
+     <div id="expl-IDM" class="expl"></div>
+     <p>Since the simulation model is entirely based on the pre-defined <i>Processing Network</i> modeling concepts of
+       <code>WorkObject</code>, <code>EntryNode</code>, <code>Arrival</code>, <code>ProcessingNode</code>, <code>ExitNode</code> 
+       and <code>Departure</code>, there is no need to to define any object type or event type.</p>
+     <p>The initial state definition consists of an entry node, two consecutive processing nodes, and an exit node.
+     Since the number of arrivals at the entry node is limited by setting the entry node attribute <code>maxNmrOfArrivals</code>
+     to 100, the simulations ends not because it reaches its end time, but because it runs out of future events (the FEL gets
+     emptied).</p>
+   </section>
+   <section><h1>Process Design Model <sup class="expl-req">?</sup></h1>
+     <div id="expl-PDM" class="expl"></div>
+     <p>Since the simulation model is entirely based on the pre-defined <i>Processing Network</i> modeling concepts of
+       <code>WorkObject</code>, <code>EntryNode</code>, <code>Arrival</code>, <code>ProcessingNode</code>, <code>ExitNode</code>
+       and <code>Departure</code>, there is no need to to define any event rule.</p>
+   </section>
+ </section>
+
+ <section class="mbd collapsed"><h1><span>►</span>See also</h1>
+   <p>Other OES models for the same system/problem/domain:</p>
+   <ol>
+     <li><a href="../1/index.html">ServiceDesk-1</a>: A service queue model
+       (one service and one queue) with two statistics: <i>maximum queue length</i> and <i>service utilization</i>.
+       The model abstracts away from individual customers and from the composition of the queue.</li>
+     <li><a href="../2/index.html">ServiceDesk-2</a>: A service queue model
+       (one service and one queue) with one statistic: the Mean Response Time, which is the average length of time
+       a customer spends in the system from arrival to departure. For recording their arrival time, individual
+       customers are represented explicitly in a <i>waitingCustomers</i> queue.</li>
+     <li><a href="../3/index.html">ServiceDesk-3</a>: A service queue model where the service
+       is modeled as an activity with the service desk as its resource, for which the utilization statistics
+       is computed automatically.</li>
+     <li><a href="../12/index.html">ServiceDesk-4</a>: A service queue model where the
+       service desk is modeled as a processing node of a processing network that has an entry node and
+       an exit node for arriving and departing customers. The model is based on the pre-defined
+       <i>Processing Network</i> concepts: WorkObject, Arrival, EntryNode, ProcessingNode and ExitNode,
+       such that processing objects 'flow through the system'.</li>
+     <li><a href="../9/index.html">ConsecutiveServices</a>: An activity-based
+       service queue model of two consecutive service providers with customer waiting lines.</li>
+   </ol>
+ </section>
+ <p><a href="index.html">Back to simulation</a></p>
+</body>
+</html>
+

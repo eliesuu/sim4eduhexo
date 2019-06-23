@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <title>FourConsecutiveMachines-3 Object Event Simulation Description</title>
+  <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
+  <link rel="stylesheet" href="../framework/description.css" />
+  <script src="metadata.js"></script>
+  <script src="../framework/description.js"></script>
+</head>
+<body onload="oes.ui.setupDescription()">
+ <div id="frontMatter">
+   <h1><span>A Processing Network Model of Four Consecutive Machines</span>
+     <a href="index.html">Back to simulation</a></h1>
+  <p><strong>Classification tags</strong>: business operations management, DES, next-event time progression, processing network model</p>
+  <figure class="right"><img src="media/img/theme-image.svg" alt="" width="240" /></figure>
+  <section id="shortDescription"></section>
+ </div>
+
+ <section class="mbd collapsed"><h1><span>►</span>Conceptual Model <sup class="expl-req">?</sup></h1>
+   <div id="expl-CM" class="expl"></div>
+
+   <section><h1>Conceptual Information Model <sup class="expl-req">?</sup></h1>
+     <div id="expl-CIM" class="expl"></div>
+     <p>The potentially relevant object types are:</p>
+<!--
+     <figure class="right-float">
+       <img src="CIM-ObjT.svg" width="450"/>
+       <figcaption>A conceptual model describing object types.</figcaption>
+     </figure>
+-->
+     <ol>
+       <li>orders,</li>
+       <li>machines,</li>
+       <li>input queues,</li>
+       <li>workers.</li>
+     </ol>
+     <p>Potentially relevant types of events are:</p>
+     <ol>
+       <li>(order) arrivals,</li>
+       <li>orders being pushed to an input buffer,</li>
+       <li><i>machine activity performances (processing steps)</i>,</li>
+       <li>(item) departures.</li>
+     </ol>
+<!--     
+     <p>Both object types and event types, with their participation associations, can be visually described
+       in a UML class diagram, as shown below.</p>
+     <figure>
+       <img src="media/img/CIM.svg" width="600"/>
+       <figcaption>A conceptual information model describing object types and event types.</figcaption>
+     </figure>
+-->     
+   </section>
+
+   <section>
+     <h1>Conceptual Process Model <sup class="expl-req">?</sup></h1>
+     <div id="expl-CPM" class="expl"></div>
+     <table>
+       <caption>Event rules.</caption>
+       <thead>
+       <tr>
+         <td>ON (event type)</td><td>DO (event routine)</td>
+       </tr>
+       </thead>
+       <tbody>
+       <tr>
+         <td>order arrival</td>
+         <td>if machine is busy, then push order to input buffer<br/>
+           else start a new machine activity
+         </td>
+       </tr>
+       <tr>
+         <td>end of machine activity</td>
+         <td>if there is a successor machine<br/>
+           then forward the order/item and, if it's not busy, start processing<br/>
+           else the processed order is completed and the manufactured item departs;<br/>
+           if there are still orders waiting in the queue,<br/>
+           then start next machine activity
+         </td>
+       </tr>
+       </tbody>
+     </table>
+<!--     
+     <figure>
+       <img src="media/img/CPM.svg" width="800"/>
+       <figcaption>A conceptual process model describing the conditional succession of events and activities.</figcaption>
+     </figure>
+-->
+   </section>
+ </section>
+
+ <section class="mbd collapsed"><h1><span>►</span>Simulation Design Model <sup class="expl-req">?</sup></h1>
+   <div id="expl-DM" class="expl"></div>
+
+   <p>In this model of four consecutive manufacturing machines, all machines are modeled as instances of a 
+     generic object type <code>Machine</code> such that they perform activities of type <code>MachineActivity</code>.
+     The model allows to have chains of manufacturing machines of any length.</p>
+
+   <section><h1>Information Design Model <sup class="expl-req">?</sup></h1>
+     <div id="expl-IDM" class="expl"></div>
+     <p>A computational design for the purpose of computing the statistics <i>average time in system</i>
+       and <i>machineActivity utilizations</i> is obtained by modeling the following types of objects, events and activities:</p>
+  <ul>
+    <li>Two object types: <b><code>Machine</code></b> and <b><code>Order</code></b>, such that
+	machines (1) have a waiting line represented as a multi-valued reference property <code>waitingOrders</code>
+	defined by a corresponding association end, and (2) may have a successor machine represented as a 
+	reference property <code>nextMachine</code>	defined by a corresponding association end.</li>
+    <li>One event type: <b><code>OrderArrival</code></b> with a reference property <code>machine</code>
+      for expressing that an order arrives at a certain machine. As an exogenous event type, <code>OrderArrival</code>
+      has a <code>recurrence</code> function representing a random variable for computing the time in-between
+      two subsequent order arrival events.</li>
+    <li>One activity type: <b><code>MachineActivity</code></b>, having a resource association with the object type
+      <code>Machine</code> (for expressing that a machine activity is performed at a certain machine) and
+      having a function <code>randomDuration</code> representing a random variable that models the random
+      variation of duration of machine activities.</li>
+  </ul>
+<!--
+     <p>The object types, event types and activity types described above, together with their participation
+       associations, are visually described in the following UML class diagram:</p>
+     <figure>
+       <img src="media/img/IDM.svg" width="600"/>
+       <figcaption>An information design model describing object types, event types and activity types.</figcaption>
+     </figure>
+-->
+   </section>
+   <section><h1>Process Design Model <sup class="expl-req">?</sup></h1>
+     <div id="expl-PDM" class="expl"></div>
+     <table>
+       <caption>Event rule design table.</caption>
+       <thead>
+       <tr>
+         <td>ON (event type)</td><td>DO (event routine)</td>
+       </tr>
+       </thead>
+       <tbody>
+       <tr>
+         <td>OrderArrival( sP) @ t</td>
+         <td>
+           CREATE order{ arrivalTime: t}<br/>
+           PUSH order TO sP.waitingOrders<br/>
+           IF sP.waitingOrders.length = 1<br/>
+           THEN SCHEDULE ActivityStart("MachineActivity", sP) @ t'
+         </td>
+       </tr>
+       <tr>
+         <td>ActivityEnd("MachineActivity", a) @ t</td>
+         <td>
+           SET sP = a.machine<br/>
+           POP order FROM sP.waitingOrders<br/>
+           IF HAS-VALUE( sP.nextMachine)<br/>
+           THEN SET nextSP = sP.nextMachine<br/>
+           &nbsp;&nbsp;&nbsp;PUSH order TO nextSP.waitingOrders<br/>
+           &nbsp;&nbsp;&nbsp;IF nextSP.waitingOrders.length = 1<br/>
+           &nbsp;&nbsp;&nbsp;THEN SCHEDULE ActivityStart("MachineActivity", nextSP) @ t'<br/>
+           ELSE REMOVE order FROM SIMULATION<br/>
+           IF sP.waitingOrders.length > 0<br/>
+           THEN SCHEDULE ActivityStart("MachineActivity", sP) @ t'
+         </td>
+       </tr>
+       </tbody>
+     </table>
+     <p>Notice that <i>t'</i> denotes the next moment in simulation time after <i>t</i>. If the simulation is using discrete time, then <i>t' = t+1</i>,
+       else (if the simulation is using continuous time), then <i>t' = t + &Delta;t</i> where <i>&Delta;t</i> denotes the smallest time increment
+       defined by the simulation model's time granularity.</p>
+   </section>
+ </section>
+
+<!--
+ <section class="mbd collapsed"><h1><span>►</span>See also</h1>
+   <p>Other OES models for the same system/problem/domain:</p>
+   <ol>
+     <li><a href="../ /index.html">  </a>:   </li>
+   </ol>
+ </section>
+-->
+ <p><a href="index.html">Back to simulation</a></p>
+</body>
+</html>
+

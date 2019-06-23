@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>ServiceDesk-2 Object Event Simulation Description</title>
+  <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
+  <link rel="stylesheet" href="../framework/description.css" />
+  <script src="metadata.js"></script>
+  <script src="../framework/description.js"></script>
+</head>
+<body onload="oes.ui.setupDescription()">
+<div id="frontMatter">
+  <h1><span>A Continuous Time Service Queue Model with Mean Response Time Statistics</span>
+    <a href="index.html">Back to simulation</a></h1>
+  <p><strong>Classification tags</strong>: business operations management, DES, next-event time progression</p>
+  <figure class="right"><img src="media/img/theme-image.svg" alt="" width="240" /></figure>
+  <section id="shortDescription"></section>
+</div>
+
+<section class="mbd collapsed"><h1><span>►</span>Conceptual Model <sup class="expl-req">?</sup></h1>
+  <div id="expl-CM" class="expl"></div>
+
+  <section><h1>Conceptual Information Model <sup class="expl-req">?</sup></h1>
+    <div id="expl-CIM" class="expl"></div>
+    <p>The potentially relevant object types are:</p>
+    <!--
+         <figure class="right-float">
+           <img src="CIM-ObjT.svg" width="450"/>
+           <figcaption>A conceptual model describing object types.</figcaption>
+         </figure>
+    -->
+    <ol>
+      <li>customers,</li>
+      <li>service desks,</li>
+      <li>service queues,</li>
+      <li>service clerks.</li>
+    </ol>
+    <p>Potentially relevant types of events are:</p>
+    <ol>
+      <li>customer arrivals,</li>
+      <li>customers queuing up,</li>
+      <li>customers being notified/invited to move forward to the service desk,</li>
+      <li>start of service,</li>
+      <li>end of service,</li>
+      <li>customer departures.</li>
+    </ol>
+    <p>Both object types and event types, with their participation associations, can be visually described in
+      a UML class diagram, as shown below.</p>
+    <figure>
+      <img src="media/img/CIM.svg" width="600"/>
+      <figcaption>A conceptual information model describing object types and event types.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h1>Conceptual Process Model <sup class="expl-req">?</sup></h1>
+    <div id="expl-CPM" class="expl"></div>
+    <table>
+      <caption>Event rules.</caption>
+      <thead>
+      <tr>
+        <th>ON (event type)</th><th>DO (event routine)</th><th>Diagram</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>customer arrival</td>
+        <td>If the service desk is busy, then the new customer queues up,
+          else the service starts.
+        </td>
+        <td><img src="media/img/Arrival_CRM.svg" width="250"/></td>
+      </tr>
+      <tr>
+        <td>service start</td>
+        <td>After some time, the service ends.</td>
+        <td><img src="media/img/ServiceStart_CRM.svg" width="250"/></td>
+      </tr>
+      <tr>
+        <td>service end</td>
+        <td>The served customer departs. If there are still customers waiting in the queue,
+          then the next service starts.
+        </td>
+        <td><img src="media/img/ServiceEnd_CRM.svg" width="250"/></td>
+      </tr>
+      </tbody>
+    </table>
+    <p>The involved types of events can be related with each other via their (possibly conditional) temporal succession,
+      as visualized in the following BPMN process diagram:</p>
+    <figure>
+      <img src="media/img/CPM.svg" width="600"/>
+      <figcaption>A conceptual process diagram integrating the event rule diagrams.</figcaption>
+    </figure>
+  </section>
+</section>
+
+<section class="mbd collapsed"><h1><span>►</span>Simulation Design Model <sup class="expl-req">?</sup></h1>
+  <div id="expl-DM" class="expl"></div>
+
+  <section><h1>Information Design Model <sup class="expl-req">?</sup></h1>
+    <div id="expl-IDM" class="expl"></div>
+    <p>A computational design for the purpose of computing one statistic: the <i>mean response time</i>,
+      defined as the average length of time a customer spends in the system from arrival to departure,
+      which is equal to the average waiting time plus the average service duration. For being able to compute the
+      mean response time, we need to store the arrival time of all arrived customers.
+      This can be achieved by explicitly modeling customers as an object type, in addition to service desks. So,
+      we get the following types of objects:</p>
+    <ul>
+      <li><b><code>Customer</code></b> having one (decimal-valued) attribute <code>arrivalTime</code>;</li>
+      <li><b><code>ServiceDesk</code></b> having an association with <code>Customer</code> representing the
+        multi-valued reference property <code>waitingCustomers</code>, and a random variable
+        <code>serviceDuration()</code> that models the random variation of service durations (expressed as
+        a function).</li>
+    </ul>
+    <p>There are two event types:</p>
+    <ul>
+      <li><b><code>CustomerArrival</code></b> having two participation associations representing the reference
+        properties: (1) <code>customer</code> with the class <code>Customer</code> as range, and (2) <code>serviceDesk</code>
+        with the class <code>ServiceDesk</code> as range. As an exogenous event type, <code>CustomerArrival</code>
+        has a <code>recurrence</code> function representing a random variable for computing the time in-between
+        two subsequent event occurrences.</li>
+      <li><b><code>CustomerDeparture</code></b> having one participation association with <code>ServiceDesk</code>
+        representing the reference property <code>serviceDesk</code>.</li>
+    </ul>
+    <p>Notice that in our design we don't need the participation association between <code>CustomerDeparture</code> and
+      <code>Customer</code> since for any customer departure event the customer concerned can be retrieved by
+    getting the first item from the <code>waitingCustomers</code> queue.</p>
+    <p>The object types and event types described above, together with their participation associations, are visually described in
+      the following UML class diagram:</p>
+    <figure>
+      <img src="media/img/IDM.svg" width="600"/>
+      <figcaption>An information design model describing object types and event types.</figcaption>
+    </figure>
+  </section>
+  <section><h1>Process Design Model <sup class="expl-req">?</sup></h1>
+    <div id="expl-PDM" class="expl"></div>
+    <table>
+      <caption>Event rule design table.</caption>
+      <thead>
+      <tr>
+        <td>ON (event type)</td><td>DO (event routine)</td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>CustomerArrival( c, sd) @ t<br/>with c:Customer and sd:ServiceDesk</td>
+        <td>
+          PUSH c TO sd.waitingCustomers<br/>
+          IF sd.waitingCustomers.length = 1<br/>
+          THEN SCHEDULE CustomerDeparture( sd) @<br/>(t + ServiceDesk.serviceDuration())
+        </td>
+      </tr>
+      <tr>
+        <td>CustomerDeparture( sd) @ t<br/>with sd:ServiceDesk</td>
+        <td>
+          POP c FROM sd.waitingCustomers<br/>
+          IF sd.waitingCustomers.length > 0<br/>
+          THEN SCHEDULE CustomerDeparture( sd) @<br/>(t + ServiceDesk.serviceDuration())
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+ </section>
+
+<section class="mbd collapsed"><h1><span>►</span>See also</h1>
+ <section><h1>Other OES Models for the Same System/Problem/Domain</h1>
+  <ol>
+    <li><a href="../1/index.html">ServiceDesk-1</a>: A service queue model
+      (one service and one queue) with two statistics: <i>maximum queue length</i> and <i>service utilization</i>.
+      The model abstracts away from individual customers and from the composition of the queue.</li>
+    <!--
+    <li><a href="../2/index.html">ServiceDesk-2</a>: A service queue model
+      (one service and one queue) with one statistic: the Mean Response Time, which is the average length of time
+      a customer spends in the system from arrival to departure. For recording their arrival time, individual
+      customers are represented explicitly in a <i>waitingCustomers</i> queue.</li>
+    -->
+    <li><a href="../3/index.html">ServiceDesk-3</a>: A service queue model where the service
+      is modeled as an activity with the service desk as its resource, for which the utilization statistics
+      is computed automatically.</li>
+    <li><a href="../12/index.html">ServiceDesk-4</a>: A service queue model where the
+      service desk is modeled as a processing node of a processing network that has an entry node and
+      an exit node for arriving and departing customers. The model is based on the pre-defined
+      <i>Processing Network</i> concepts: WorkObject, Arrival, EntryNode, ProcessingNode and ExitNode,
+      such that processing objects 'flow through the system'.</li>
+    <li><a href="../9/index.html">ConsecutiveServices</a>: An activity-based
+      service queue model of two consecutive service providers with customer waiting lines.</li>
+    <li><a href="../11/index.html">ProcessingNetwork-1</a>: A service queue model
+      where service providers are modeled as processing nodes (with input queues) within a processing network
+      that has an entry node and an exit node for arriving and departing customers. The model is based on
+      the pre-defined <i>Processing Network</i> concepts: WorkObject, Arrival, EntryNode, ProcessingNode and ExitNode,
+      such that processing objects 'flow through the system'.</li>
+  </ol>
+  </section>
+  <section><h1>Similar Models Implemented with Other Frameworks</h1>
+   <ol>
+     <li><a href="http://ccl.northwestern.edu/netlogo/models/community/Queueing_Simulation_Discrete_Event">Queueing_Simulation_Discrete_Event</a>: 
+	 This NetLogo simulation uses NetLogo's tick-advance primitive to advance simulation time by non-integral amounts. However, NetLogo's 
+	 standard ticks display is unable to display non-integral values, so a custom ticks display has to be programmed. Copyright 2010, Nick Bennett.</li>
+   </ol>
+  </section>
+ </section>
+ <p><a href="index.html">Back to simulation</a></p>
+</body>
+</html>
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <title>Gossip Object Event Simulation Description</title>
+  <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
+  <link rel="stylesheet" href="../framework/description.css" />
+  <script src="metadata.js"></script>
+  <script src="../framework/description.js"></script>
+</head>
+<body onload="oes.ui.setupDescription()">
+<div id="frontMatter">
+  <h1><span>A Cellular Automata Model for the Problem of Spreading Gossip</span>
+    <a href="index.html">Back to simulation</a></h1>
+  <p><strong>Classification tags</strong>: Cellular Automata model, fixed-increment time progression.</p>
+  <section id="shortDescription"></section>
+ </div>
+ <section><h1>Model</h1>
+   <p>The <em>Gossip Model</em> is a Cellular Automata model, using the concept of N/E/S/W-neighbourhood 
+    (also called <i>von Neumann neighbourhood</i>) where a grid cell has 4 neighbours.</p>
+   <section><h1>Information Model</h1>
+     <p>An integer grid has been chosen as the space model. Grid cells have either the value 0, representing a 
+	  cell that has not yet received the gossip, or the value 1, representing a cell that has received the gossip.</p>
+   </section>
+   <section><h1>Process Model</h1>
+     <p>The model is based on two rules:</p>
+     <ol>
+       <li>If the cell is in state 0, and it has one or more neighbours in state 1, then for each of them, 
+	    change the cell's state to 1 with some probability, otherwise leave it at 0. </li>
+       <li>If the cell is in state 1, it remains in that state.</li>
+     </ol>
+   </section>
+ </section>
+ <p><a href="index.html">Back to simulation</a></p>
+</body>
+</html>
+
