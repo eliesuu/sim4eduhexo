@@ -14,6 +14,4 @@ layout: sims
  </div>
 </main>
 <noscript>
- <p>Please turn on JavaScript in your browser. Otherwise you cannot run Sim4edu simulations.</p>
-</noscript>
-<script src="../metadata.js"></script>
+ <p>Please turn on JavaScript in your browser. Otherwise you cannot run Sim4edu simulations.</p>cv
