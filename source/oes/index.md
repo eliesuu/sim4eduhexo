@@ -1,5 +1,6 @@
 ---
 title: Object Event Modeling And Simulation
+layout: area-page
 ---
 <aside>
 <h3>Papers</h3>
