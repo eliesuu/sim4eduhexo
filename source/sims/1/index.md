@@ -1,3 +1,6 @@
+---
+layout: sims
+---
 <div id="frontMatter">
  <div id="sim4eduinfo">Created with the <i>Object Event Simulation (OES)</i> framework <b><i>OESjs</i></b> available from
   <a href='https://sim4edu.com'>sim4edu.com</a>.</div>
