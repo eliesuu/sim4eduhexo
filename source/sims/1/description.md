@@ -1,3 +1,6 @@
+---
+layout: description
+---
 <div id="frontMatter">
   <h1><span>A Single Service Desk Queueing System Model with Utilization and Maximum Queue Length Statistics</span>
    <a href="index.html">Back to simulation</a></h1>
