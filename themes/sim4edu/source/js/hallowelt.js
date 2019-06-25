@@ -1,4 +1,1 @@
-function myFunction() 
-{
- alert("Hello");
-}
+alert("Hello");
