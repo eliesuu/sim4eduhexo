@@ -1,8 +1,4 @@
----
-layout: description
----
-<div onload="oes.ui.setupDescription()">
-<div id="frontMatter">
+ <div id="frontMatter">
   <h1><span>A Single Service Desk Queueing System Model with Utilization and Maximum Queue Length Statistics</span>
    <a href="index.html">Back to simulation</a></h1>
     <p><strong>Classification tags</strong>: business operations management, DES, next-event time progression</p>
@@ -244,5 +240,3 @@ layout: description
   </section>
  </section>
  <p><a href="index.html">Back to simulation</a></p>
- </div>
-
