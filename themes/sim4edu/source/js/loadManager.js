@@ -456,6 +456,7 @@ oes.loadManager.loadFile = function (pathAndFilename, basePath, callback, errCal
  *    an optional callback function to be invoked at the end of the load.
  */
 oes.loadManager.loadFileBatch = function( filesToLoad, basePath, callback) {
+  basePath = "/js/1/";
   // no callback provided, define an empty function
   callback = callback || function () {};
   if(filesToLoad.length < 1) callback();
