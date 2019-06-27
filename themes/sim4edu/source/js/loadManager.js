@@ -52,7 +52,7 @@ oes.loadManager = {
   // specifies the base path for file loading.
   // NOTE: every loading mode has its own local basePath which can be overridden
   //       by using this parameter, which takes precedence over the local one.
-  basePath: "",
+  basePath: "/js/",
   // a callback to be invoked when the load ends.
   // NOTE: this can be overridden with whatever needs to be done at the end.
   loadFinishedCallback: function (){},
@@ -119,7 +119,7 @@ oes.loadManager = {
     // components for simulation development
     // NOTE: used by simulation authors
     dev: {
-      basePath: "../framework/",
+      basePath: "../js/framework/",
       coreCssSrc: ["simulator-core.css"],
       coreJsSrc: ["simulator-core.js"],
       coreSpace: ["space-core.js"],
@@ -133,7 +133,7 @@ oes.loadManager = {
     // components for production mode
     // NOTE: simulations are deployed on a web server
     deploy: {
-      basePath: window.location.href + "../framework/",
+      basePath: window.location.href + "../js/framework/",
       /* coreCssSrc: ["simulator-core.css"], */
       coreCssSrc: [],
       /* coreJsSrc: ["simulator-core.js"], */
@@ -248,9 +248,9 @@ oes.loadManager.preload = function (callback) {
     // oes.loadManager.basePath has priority´, allowing to override the location.
     basePath = oes.loadManager.basePath || compSrc.basePath,
     callback = typeof callback === "function" ? callback : function(){},
-    scenarioFilePath = "./";
+    scenarioFilePath = "../js/";
   oes.loadManager.showConfigInConsole();
-  if (oes.loadManager.useScenarioId) scenarioFilePath = "./" + oes.loadManager.modelNameOrId + "/";
+  if (oes.loadManager.useScenarioId) scenarioFilePath = "../js/framework/" + oes.loadManager.modelNameOrId + "/";
   oes.loadManager.progressIncStep = 40 / (compSrc.coreCssSrc.length + compSrc.coreJsSrc.length);
   // load simulator CSS core
   oes.loadManager.loadFileBatch(compSrc.coreCssSrc, basePath, function () {
@@ -371,7 +371,7 @@ oes.loadManager.loadScenarioPrerequisites = function (basePath, callback) {
     compToLoad = compToLoad.concat( compSrc.gridDomVis);
   oes.loadManager.progressIncStep = 30 / (compToLoad.length + modelFilesToLoad.length);
   // load prerequisites
-  if (oes.loadManager.useScenarioId) modelFilePath = "./" + oes.loadManager.modelNameOrId + "/";
+  if (oes.loadManager.useScenarioId) modelFilePath = "../js/framework/" + oes.loadManager.modelNameOrId + "/";
   console.log(modelFilePath)
   oes.loadManager.loadFileBatch( compToLoad, basePath, function () {
     // load additional model files
@@ -456,7 +456,6 @@ oes.loadManager.loadFile = function (pathAndFilename, basePath, callback, errCal
  *    an optional callback function to be invoked at the end of the load.
  */
 oes.loadManager.loadFileBatch = function( filesToLoad, basePath, callback) {
-  basePath = "../js/1/";
   // no callback provided, define an empty function
   callback = callback || function () {};
   if(filesToLoad.length < 1) callback();

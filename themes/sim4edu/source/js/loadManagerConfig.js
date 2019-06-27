@@ -25,6 +25,6 @@
 
 
 /******* Configuration for simulation development ****************/
-oes.loadManager.basePath = "../framework/";
+oes.loadManager.basePath = "../js/framework/";
 oes.loadManager.codeLoadingMode = "deploy";
 oes.loadManager.simsUrlIdentifier = "";
