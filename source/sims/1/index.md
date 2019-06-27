@@ -22,5 +22,7 @@ layout: sims
 <script src="/js/framework/simulator-core.js" async="async"></script>
 <script src="/js/framework/chartist.js" async="async"></script>
 <!-- load scenario.js and all files required by it, and set up the user interface -->
+<script src="/js/loadManager.js"></script>
+<!-- load scenario.js and all files required by it, and set up the user interface -->
 
 
