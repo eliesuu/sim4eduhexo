@@ -1,6 +1,7 @@
 ---
 layout: description
 ---
+<div onload="oes.ui.setupDescription()">
 <div id="frontMatter">
   <h1><span>A Single Service Desk Queueing System Model with Utilization and Maximum Queue Length Statistics</span>
    <a href="index.html">Back to simulation</a></h1>
@@ -243,4 +244,5 @@ layout: description
   </section>
  </section>
  <p><a href="index.html">Back to simulation</a></p>
+ </div>
 
