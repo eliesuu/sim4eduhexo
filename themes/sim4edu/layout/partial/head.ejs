@@ -2,23 +2,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <title>Sim4edu - Web-Based Simulation for Science and Education</title>
-    <script>
-        var accessURL = new URL( window.location.href),accessLang = accessURL.searchParams.get("lang");
-        var userLangFam = s4e.getUserLanguage().substring(0,2);
-        if (accessLang) {
-            accessLang = accessLang.substring(0,2);
-            if (accessLang !== "en" && s4e.supportedLangFamilies.includes( accessLang)) {
-                window.location = "./" + accessLang + "/index.html";
-            }
-        } else {
-            // switch to user language family if it is not "en" and supported
-            if (userLangFam !== "en") {  // not an "en" locale
-                if (s4e.supportedLangFamilies.includes( userLangFam)) {
-                    window.location = "./" + userLangFam + "/index.html";
-                }
-            }
-        }
-        </script> 
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta http-equiv="Content-Language" content="en"/>
     <meta name="description" content="The Simulation for Education (sim4edu.com) project website supports web-based simulation with open source technologies for science and education. It provides both simulation technologies and a library of educational simulations." />
