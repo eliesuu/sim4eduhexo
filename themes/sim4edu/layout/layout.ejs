@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html>
 <%- partial('partial/head') %>
-<body>
-    <%- partial('partial/header') %>
-    <%- body %>
-    <%- partial('partial/footer') %>
+
+<% if (page.layout==='description') { %>
+        <body onload="oes.ui.setupDescription()">
+    <%} else {%>  
+        <body>
+    <%} %>
+        <%- partial('partial/header') %>
+        <%- body %>
+        <%- partial('partial/footer') %>
 </body>
 </html>
