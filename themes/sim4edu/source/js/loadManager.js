@@ -248,9 +248,9 @@ oes.loadManager.preload = function (callback) {
     // oes.loadManager.basePath has priority´, allowing to override the location.
     basePath = oes.loadManager.basePath || compSrc.basePath,
     callback = typeof callback === "function" ? callback : function(){},
-    scenarioFilePath = "../js/1/";
+    scenarioFilePath = "../js/2/";
   oes.loadManager.showConfigInConsole();
-  if (oes.loadManager.useScenarioId) scenarioFilePath = "../js/1/" + oes.loadManager.modelNameOrId + "/";
+  if (oes.loadManager.useScenarioId) scenarioFilePath = "../js/3/" + oes.loadManager.modelNameOrId + "/";
   oes.loadManager.progressIncStep = 40 / (compSrc.coreCssSrc.length + compSrc.coreJsSrc.length);
   // load simulator CSS core
   oes.loadManager.loadFileBatch(compSrc.coreCssSrc, basePath, function () {
