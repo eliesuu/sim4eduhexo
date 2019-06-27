@@ -17,7 +17,7 @@ sim.model.space = sim.model.space || {};
 oes.loadManager = {
   // loadManager.js relative path
   // NOTE: intended for internal use only!
-  _ownPath: "/js/1/",
+  _ownPath: "./",
   // loadManager script file name (normally is "loadManager.js")
   // NOTE: intended for internal use only!
   _ownScriptFilename: "loadManager.js",
@@ -119,7 +119,7 @@ oes.loadManager = {
     // components for simulation development
     // NOTE: used by simulation authors
     dev: {
-      basePath: "../js/framework/",
+      basePath: "../framework/",
       coreCssSrc: ["simulator-core.css"],
       coreJsSrc: ["simulator-core.js"],
       coreSpace: ["space-core.js"],
@@ -172,8 +172,8 @@ oes.loadManager.showConfigInConsole = function() {
   console.log("basePath = '" + basePath + "'");
   console.log("modelNameOrId = '" + oes.loadManager.modelNameOrId + "'");
   console.log("useScenarioId = " + oes.loadManager.useScenarioId);
-  console.log("_ownPath = '" + (oes.loadManager._ownPath || "../js/1/" )+ "'");
-  console.log("_ownScriptFilename = '" + (oes.loadManager._ownScriptFilename || "../js/1/" )+ "'");
+  console.log("_ownPath = '" + (oes.loadManager._ownPath || "./" )+ "'");
+  console.log("_ownScriptFilename = '" + (oes.loadManager._ownScriptFilename || "./" )+ "'");
   console.log("queryParams = " + JSON.stringify(oes.loadManager.queryParams));
   console.log("fullURL = '" + window.location.href + "'");
   console.log("###########################################################");
@@ -214,7 +214,7 @@ oes.loadManager.setup = function(callback) {
     else scriptName = oes.loadManager._ownScriptFilename = lmPath.substring(index);
   }
   index = lmPath.indexOf(scriptName);
-  lmPath = oes.loadManager._ownPath = lmPath.substring(0, index) || "../js/1/";
+  lmPath = oes.loadManager._ownPath = lmPath.substring(0, index) || "./";
   // try to load the loadManagerConfig.js file, which is the configuration file
   // for the load manager containing various settings, and can also override default
   // values for the loadManager, if this is required on special cases
@@ -250,7 +250,7 @@ oes.loadManager.preload = function (callback) {
     callback = typeof callback === "function" ? callback : function(){},
     scenarioFilePath = "/js/1/";
   oes.loadManager.showConfigInConsole();
-  if (oes.loadManager.useScenarioId) scenarioFilePath = "../js/3/" + oes.loadManager.modelNameOrId + "/";
+  if (oes.loadManager.useScenarioId) scenarioFilePath = "./" + oes.loadManager.modelNameOrId + "/";
   oes.loadManager.progressIncStep = 40 / (compSrc.coreCssSrc.length + compSrc.coreJsSrc.length);
   // load simulator CSS core
   oes.loadManager.loadFileBatch(compSrc.coreCssSrc, basePath, function () {
@@ -371,7 +371,7 @@ oes.loadManager.loadScenarioPrerequisites = function (basePath, callback) {
     compToLoad = compToLoad.concat( compSrc.gridDomVis);
   oes.loadManager.progressIncStep = 30 / (compToLoad.length + modelFilesToLoad.length);
   // load prerequisites
-  if (oes.loadManager.useScenarioId) modelFilePath = "../js/1/" + oes.loadManager.modelNameOrId + "/";
+  if (oes.loadManager.useScenarioId) modelFilePath = "./" + oes.loadManager.modelNameOrId + "/";
   console.log(modelFilePath)
   oes.loadManager.loadFileBatch( compToLoad, basePath, function () {
     // load additional model files
