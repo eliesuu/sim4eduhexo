@@ -17,7 +17,7 @@ sim.model.space = sim.model.space || {};
 oes.loadManager = {
   // loadManager.js relative path
   // NOTE: intended for internal use only!
-  _ownPath: "./",
+  _ownPath: "/js/1/",
   // loadManager script file name (normally is "loadManager.js")
   // NOTE: intended for internal use only!
   _ownScriptFilename: "loadManager.js",
