@@ -59,17 +59,18 @@
             gtag('config', 'UA-98612205-1', {'anonymize_ip':true});
             </script>
             -->
+            css(['css/normalize.css', 'css/basic-styles.css', 'css/prio-menu.css']
             <% if (page.layout==='area-page') { %>
-                <%- css(['css/normalize.css', 'css/basic-styles.css', 'css/area-page.css', 'css/prio-menu.css', 'css/media-queries.css']) %> 
+                <%- css(['css/area-page.css', 'css/prio-menu.css', 'css/media-queries.css']) %> 
             <%} else {%>
                 <% if (page.layout==='sims')  { %>
-                    <%- css(['css/normalize.css', 'css/basic-styles.css', 'css/sims/simulator-core.css', 'css/sims/chartist.css', 'css/prio-menu.css', 'css/sims/mq-simulation-page.css']) %> 
+                    <%- css(['css/sims/simulator-core.css', 'css/sims/chartist.css', 'css/prio-menu.css', 'css/sims/mq-simulation-page.css']) %> 
                 <%} else {%>  
                     <% if (page.layout==='description')  { %>
-                        <%- css(['css/normalize.css', 'css/basic-styles.css', 'css/sims/description.css', 'css/prio-menu.css', 'css/sims/mq-description.css', ]) %> 
+                        <%- css(['css/sims/description.css', 'css/prio-menu.css', 'css/sims/mq-description.css', ]) %> 
                         <%- js(['js/1/metadata.js', 'js/framework/description.js']) %>
                     <%} else {%>   
-                        <%- css(['css/ant.css', 'css/normalize.css', 'css/basic-styles.css', 'css/start-page.css', 'css/prio-menu.css', 'css/media-queries.css']) %> 
+                        <%- css(['css/ant.css', 'css/start-page.css', 'css/prio-menu.css', 'css/media-queries.css']) %> 
                     <%} %>
                 <%} %>
             <%} %>
