@@ -1,3 +1,6 @@
+---
+desc: Die sim4edu.com Projekt-Website unterstützt web-basierte Simulation mit Open-Source-Technologien für Wissenschaft und Bildung. Die Website stellt sowohl Simulationstechnologien als auch eine Bibliothek von Lern-Simulationen zur Verfügung.
+---
 <main>
 <section class="description"><h1>Web-Based Simulation for Science and Education</h1>
 <div>
