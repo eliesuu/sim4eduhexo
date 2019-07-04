@@ -1,0 +1,192 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+html {
+  color: black;
+  font-size: 1em;
+  min-height:100%;
+  height:auto !important;
+  height:100%;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* added to HTML5 Boilerplate 
+   It means that width/height includes padding, border and margin */
+* {
+  box-sizing: border-box;
+}
+figure {
+  margin: 1em;
+}
+
+/*******************************************************************
+A vertical flex container for header, #between-head-and-foot, footer
+*******************************************************************/
+body {
+  min-height: 100vh;  /* % of viewport height */
+  display: flex;  /* defines a flex container */
+  flex-direction: column;
+}
+
+#navigation {
+ padding: 10px;
+}
+
+aside {
+  width: 15vw;  /* % of viewport width */
+  background: #EEE;
+  padding: 10px;
+  min-width: 10em;
+}
+
+#language {
+ float:right;
+}
+
+
+header,
+footer {
+  background: lightgrey;
+  padding:10px 0px 10px 0px;
+}
+
+footer {
+  padding: 10px;
+}
+
+main {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 10px;
+}
+
+header {
+  background: rgb(255,255,255);
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(238,238,238,1) 100%);
+}
+header, footer {text-align:center;}
+nav, aside {padding: 10px 10px 0px 10px;}
+
+header img{
+	float:left;
+	width:auto;
+	max-width:30%;
+	margin:10px;
+}
+
+aside h1 {
+    margin: -10px -10px 5px -10px;
+    background: #FF6600;
+    padding: 10px 10px 5px 20px;
+    color: #FFF;
+    font: bold 20px sans-serif
+}
+aside ul {
+  margin: -5px -10px 0px -10px;
+}
+aside li {
+  margin-left: -40px;
+  padding: 5px 10px 3px 20px;
+  list-style-type: none
+}
+
+/*********************************************
+ Content Styles
+*********************************************/
+body {
+  font-family: Helvetica, Helvetica Neue, Arial;
+}
+p, dd {
+  margin-top: 0;
+  margin-bottom: 0.33em;
+
+  -webkit-hyphens: auto;
+  -webkit-hyphenate-limit-before: 3;
+  -webkit-hyphenate-limit-after: 3;
+  -webkit-hyphenate-limit-chars: 6 3 3;
+  -webkit-hyphenate-limit-lines: 2;
+  -webkit-hyphenate-limit-last: always;
+  -webkit-hyphenate-limit-zone: 8%;
+
+  -moz-hyphens: auto;
+  -moz-hyphenate-limit-chars: 6 3 3;
+  -moz-hyphenate-limit-lines: 2;
+  -moz-hyphenate-limit-last: always;
+  -moz-hyphenate-limit-zone: 8%;
+
+  -ms-hyphens: auto;
+  -ms-hyphenate-limit-chars: 6 3 3;
+  -ms-hyphenate-limit-lines: 2;
+  -ms-hyphenate-limit-last: always;
+  -ms-hyphenate-limit-zone: 8%;
+
+  hyphens: auto;
+  hyphenate-limit-chars: 6 3 3;
+  hyphenate-limit-lines: 2;
+  hyphenate-limit-last: always;
+  hyphenate-limit-zone: 8%;
+}
+h1 {
+  margin-top: 0;
+}
+
+#page-title {
+    float: left;
+    max-width: 60%;
+    margin-top: 0.5em;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: #666;
+}
+
+nav > h1,
+aside > h1
+section.sim-category > h1 {
+  font-size: 90%;
+}
+dt {
+  margin-bottom: 3px;
+}
+dd {
+  margin-left: 1em;
+  margin-bottom: 3px;
+}
+
+section.sim-category {
+  flex: 1;
+  min-width: 12em;
+}

@@ -1,0 +1,39 @@
+/*********************************************
+A horizontal flex container for sections
+*********************************************/
+main {
+  display: flex;
+  flex-flow: row wrap;
+  order: 1;/* Assign a higher order number to the flex-items main and aside, so nav is displayed first. By default flex-items have an order number of 0. */
+  flex: 1; /* shorthand for flex-grow [flex-shrink [flex-basis]] combined default is 0 1 auto  */
+}
+.description h1 {
+  font: bold 20px sans-serif; 
+  background:#DDD; 
+  padding: 10px 20px 5px 20px; 
+  margin: 0px -20px 10px -20px;
+}
+.sim-category {
+  flex: 1;
+  min-width: 12em;
+  color:#666; 
+  padding: 1em; 
+  margin: 10px;
+}
+.sim-category > h1 {font-size: 90%;}
+.sim-category a {color:#FF6600;}
+.sim-category li {margin-left: -20px;}
+
+#ad-hoc-sim {background: rgba(207,248,199,1);}
+#DES {background: rgba(255,242,221,1);}
+#grid-space {background: rgba(254,214,214,1);}
+#contin {background: rgba(175,233,233,1);}
+
+aside ul {
+  font-size: 90%;
+}
+
+
+.sim-category {color:#666;margin:10px;padding: 1em;}
+.sim-category a {color:#FF6600}
+.sim-category li {margin-left: -20px;}

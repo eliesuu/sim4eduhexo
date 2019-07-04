@@ -1,0 +1,8 @@
+/*********************************************
+A horizontal flex container for sections
+*********************************************/
+main {
+  width:100%;
+  text-align:center;
+  margin: 100px 0px 100px 0px;
+}

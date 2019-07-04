@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en-US" xml:lang="en-US" >
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sim4edu - Web-Based Simulation for Science and Education</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="description" content="The Simulation for Education (sim4edu.com) project website supports web-based simulation with open source technologies for science and education. It provides both simulation technologies and a library of educational simulations.">
+    <!-- Facebook Open Graph annotations -->
+    <meta property="og:site_name" content="Sim4edu">
+    <meta property="og:title" content="Sim4edu - Web-Based Simulation for Science and Education">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="zh_Hans">
+    <meta property="og:locale:alternate" content="de">
+    <meta property="og:description" content="The Simulation for Education (sim4edu.com) project website supports web-based simulation with open source technologies for science and education. It provides both simulation technologies and a library of educational simulations.">
+    <meta property="og:url" content="https://sim4eduhexo.netlify.com/">
+    <meta property="og:image" content="../sim4edu.png">  <!-- recommended 1200 x 630 --> 
+    <!-- Google annotations -->
+    <script type="application/ld+json">{
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Brandenburg University of Technology",
+                    "logo": "https://www.b-tu.de/fileadmin/btu-cs/images/logo/BTULogo_englisch_grau.png"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Gerd Wagner",
+                    "image": {
+                        "@type": "ImageObject",
+                        "url": "https://ari123.com/media/img/GW.jpg",
+                        "width": 230,
+                        "height": 230
+                    },
+                    "url": "https://www.linkedin.com/in/gerdwagner/",
+                    "sameAs": []
+                },
+                "url": "https://sim4edu.com/",
+                "datePublished": "2018-05-04T00:00:00.000Z",
+                "dateModified": "2019-02-18T14:35:00.000Z",
+                "image": {
+                    "@type": "ImageObject",
+                    "url": "https://sim4edu.com/img/sim4edu.svg",
+                    "width": 1200,
+                    "height": 292
+                },
+                "keywords": "simulation, online simulation, web-based simulation, javascript-based simulation, educational simulation, instructional simulation, simulation education",
+                "description": "The Simulation for Education (sim4edu.com) project website supports web-based simulation with open source technologies for science and education. It provides both simulation technologies and a library of educational simulations."
+            }
+        </script>  
+    <link rel="icon" type="image/png" href="/img/icon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/img/icon-16x16.png" sizes="16x16">
+    <!-- Global site tag (gtag.js) - Google Analytics
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98612205-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-98612205-1', {'anonymize_ip':true});
+            </script>
+            -->
+            <link rel="stylesheet" href="/css/normalize.css">
+<link rel="stylesheet" href="/css/basic-styles.css">
+<link rel="stylesheet" href="/css/prio-menu.css">
+            
+                  
+                    
+                        <link rel="stylesheet" href="/css/sims/description.css">
+<link rel="stylesheet" href="/css/prio-menu.css">
+<link rel="stylesheet" href="/css/sims/mq-description.css"> 
+                        <script src="/js/1/metadata.js"></script>
+<script src="/js/framework/description.js"></script>
+                    
+                
+            
+</head> 
+
+
+        <body onload="oes.ui.setupDescription()">
+    
+        <header>
+    <div id="logo">
+        <a href="/"><img src="/img/sim4edu.svg" alt="Sim4edu logo"></a>
+    </div>
+    <div id="slogan">
+        Share your simulations. Use the power of the Web!
+    </div>
+    <div>
+        <label title="Select language">
+            <svg version="1.1" viewbox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" width="20" aria-labelledby="desc" role="img">
+                <desc>Globe icon for language selection</desc>
+                <path d="m67.399 12.109c-31.345-2.004-57.294 23.944-55.29 55.29 1.656 25.909 22.584 46.836 48.493 48.493 31.345 2.004 57.294-23.944 55.29-55.29-1.657-25.909-22.585-46.837-48.493-48.493zm20.146 77.693c2.045-7.026 3.266-15.108 3.43-23.802h20.975c-0.46 11.147-4.739 21.319-11.561 29.251-3.13-2.193-7.505-4.047-12.844-5.449zm-59.933 5.449c-6.822-7.932-11.102-18.104-11.561-29.251h20.975c0.163 8.694 1.384 16.776 3.43 23.802-5.341 1.403-9.716 3.256-12.844 5.449zm12.833-57.018c-2.04 7.019-3.257 15.088-3.42 23.767h-20.974c0.457-11.094 4.698-21.222 11.463-29.138 3.183 2.157 7.589 3.985 12.931 5.371zm21.555 23.767h-20.975c0.172-8.277 1.403-16.09 3.414-22.848 5.406 1.09 11.401 1.711 17.561 1.823v21.025zm0 4v21.026c-6.173 0.112-12.167 0.742-17.553 1.846-2.016-6.764-3.249-14.585-3.422-22.872h20.975zm4 0h20.975c-0.172 8.287-1.406 16.108-3.421 22.872-5.389-1.104-11.382-1.734-17.554-1.846v-21.026zm0-4v-21.026c6.16-0.111 12.155-0.733 17.561-1.823 2.011 6.759 3.242 14.572 3.414 22.849h-20.975zm0-25.025v-20.773c6.569 1.247 12.446 8.542 16.3 19.128-5.026 0.98-10.585 1.538-16.3 1.645zm-4-20.773v20.773c-5.715-0.107-11.274-0.665-16.3-1.645 3.854-10.586 9.731-17.882 16.3-19.128zm0 74.824v20.773c-6.565-1.246-12.438-8.532-16.292-19.106 5.009-0.994 10.566-1.559 16.292-1.667zm4 20.772v-20.772c5.725 0.108 11.281 0.673 16.292 1.667-3.854 10.573-9.727 17.86-16.292 19.105zm24.975-49.798c-0.163-8.679-1.38-16.748-3.419-23.767 5.342-1.387 9.748-3.214 12.93-5.371 6.765 7.915 11.006 18.044 11.463 29.138h-20.974zm6.746-32.121c-2.8 1.774-6.718 3.339-11.387 4.537-2.51-7.096-5.917-12.87-9.931-16.783 8.163 2.186 15.475 6.472 21.318 12.246zm-56.054 4.538c-4.669-1.198-8.587-2.763-11.387-4.537 5.842-5.775 13.155-10.06 21.319-12.246-4.015 3.912-7.423 9.687-9.932 16.783zm-11.286 63.801c2.74-1.8 6.628-3.387 11.298-4.6 2.508 7.08 5.911 12.842 9.919 16.749-8.117-2.174-15.391-6.425-21.217-12.149zm55.94-4.6c4.669 1.213 8.558 2.8 11.298 4.6-5.826 5.725-13.099 9.976-21.217 12.149 4.008-3.907 7.41-9.669 9.919-16.749z"/>
+            </svg>
+            <select id="languageSelect" onchange="s4e.switchLanguage()" aria-label="Language"></select>
+        </label>
+    </div>
+    <div id="navigation" class="priority-nav">
+        <nav id="menu">
+            <ul id="menu-closed">
+                <li><a href="/">Home</a></li>
+                <li><a href="/oes" title="Agent/Object Event Simulation">A/OES</a></li>
+                <li><a href="/simulations">Simulations</a></li>
+                <li><a href="/reading">Tutorials/Articles</a></li>
+                <li><a href="/downloads">Downloads</a></li>
+                <li><a href="/faq" title="Frequently Asked Questions">FAQ</a></li>
+                <li><a href="#menu-closed">&#215;</a></li>
+                <li><a href="#menu">&#9776;</a></li>
+            </ul>
+        </nav>
+    </div>    
+</header>
+        <div id="between-head-and-foot">
+    
+     <div id="frontMatter">
+  <h1><span>A Single Service Desk Queueing System Model with Utilization and Maximum Queue Length Statistics</span>
+   <a href="index.html">Back to simulation</a></h1>
+    <p><strong>Classification tags</strong>: business operations management, DES, next-event time progression</p>
+    <figure class="right"><img src="media/img/theme-image.svg" alt width="240"></figure>
+    <section id="shortDescription"></section>
+ </div>
+  <section class="mbd collapsed"><h1><span>►</span>Conceptual Model <sup class="expl-req">?</sup></h1>
+   <div id="expl-CM" class="expl"></div>
+
+   <section><h1>Conceptual Information Model <sup class="expl-req">?</sup></h1>
+     <div id="expl-CIM" class="expl"></div>
+     <p>The potentially relevant object types are:</p>
+<!--
+     <figure class="right-float">
+       <img src="CIM-ObjT.svg" width="450"/>
+       <figcaption>A conceptual model describing object types.</figcaption>
+     </figure>
+-->
+     <ol>
+       <li>customers,</li>
+       <li>service desks,</li>
+       <li>service queues,</li>
+       <li>service clerks.</li>
+     </ol>
+     <p>Notice that it seems preferable (more natural) to separate the service queue from the service desk and
+       not consider the customer that is currently being served at the service desk to be part of the queue.</p>
+     <p>Conceptually, a queue is a linearly ordered collection of objects of a certain type with a First-In-First-Out
+       policy: the next object to be removed is the first object, at the front of the queue, while additional
+       objects are added at the end of the queue.</p>
+     <p>Potentially relevant types of events are:</p>
+     <ol>
+       <li>customer arrivals,</li>
+       <li>customers queuing up,</li>
+       <li>customers being notified/invited to move forward to the service desk,</li>
+       <li>service start,</li>
+       <li>service end,</li>
+       <li>customer departures.</li>
+     </ol>
+     <p>Notice that a pair of start and end events, like "service start" and "service end", indicates that there is
+      an activity that is temporally framed by these two events. It's an option to consider also activities, in addition
+      to objects and events, in a conceptual model. We will do this in our <a href="https://sim4edu.com/sims/3/description.html" target="_blank" rel="noopener">
+      3rd simulation model</a> of the service desk system.</p>
+     <p>Both object types and event types, together with their participation associations, can be visually described in
+       a UML class diagram, as shown below.</p>
+     <figure>
+       <img src="media/img/CIM.svg" width="600">
+       <figcaption>A conceptual information model describing object types and event types.</figcaption>
+     </figure>
+   </section>
+
+   <section>
+     <h1>Conceptual Process Model <sup class="expl-req">?</sup></h1>
+     <div id="expl-CPM" class="expl"></div>
+     <table>
+       <caption>Event rules.</caption>
+       <thead>
+       <tr>
+         <th>ON (event type)</th><th>DO (event routine)</th><th>Rule Diagram</th>
+       </tr>
+       </thead>
+       <tbody>
+       <tr>
+         <td>customer arrival</td>
+         <td>If the service desk is busy, then the new customer queues up,
+           else the service starts.</td>
+         <td><img src="media/img/Arrival_CRM.svg" width="250"></td>
+       </tr>
+       <tr>
+         <td>service start</td>
+         <td>After some time, the service ends.</td>
+         <td><img src="media/img/ServiceStart_CRM.svg" width="250"></td>
+       </tr>
+       <tr>
+         <td>service end</td>
+         <td>The served customer departs. If there are still customers waiting in the queue,
+           then the next service starts.</td>
+         <td><img src="media/img/ServiceEnd_CRM.svg" width="250"></td>
+       </tr>
+       </tbody>
+     </table>
+     <p>The involved types of events can be related with each other via their (possibly conditional) temporal succession,
+      as visualized in the following BPMN process diagram:</p>
+     <figure>
+       <img src="media/img/CPM.svg" width="600">
+       <figcaption>A conceptual process diagram integrating the event rule diagrams.</figcaption>
+     </figure>
+   </section>
+ </section>
+
+ <section class="mbd collapsed"><h1><span>►</span>Simulation Design Model <sup class="expl-req">?</sup></h1>
+   <div id="expl-DM" class="expl"></div>
+
+   <section><h1>Information Design Model <sup class="expl-req">?</sup></h1>
+     <div id="expl-IDM" class="expl"></div>
+     <p>In the current simulation project, the purpose of the simulation model is to compute two statistics:
+       the <em>service utilization</em> and <em>the maximum queue length</em>. We may therefore abstract away from many
+       of the object types from the conceptual information model:</p>
+     <ul>
+       <li> <code>Customer</code>: we don't need any information about individual customers;</li>
+       <li> <code>ServiceQueue</code>: we don't need to know who is next, it's sufficient to know <em>the length of the queue</em>;</li>
+       <li> <code>ServiceDesk</code>: we don't need any information about the service desks, the information if
+         <em>the service desk is busy</em> or not is obtained by testing if the queue's length is greater than 0.</li>
+       <li> <code>ServiceClerk</code>: we don't need any information about service clerks.</li>
+     </ul>
+     <p>Consequently, a computational design for the purpose of computing the two statistics <em>maximum queue length</em>
+       and <em>service utilization</em> is obtained by modeling only one object type: <b><code>ServiceDesk</code></b> with
+       one (integer-valued) attribute <code>queueLength</code>, and with one random variable <code>serviceDuration()</code>
+       expressed in the form of a special kind of function.</p>
+     <p>Concerning the event types described in the conceptual information model, the goal is to keep
+       only those of them, which are really needed, in the design model. This question is closely related
+       to the question, which types of state changes and follow-up event creation have to be modeled for
+       being able to answer the research question(s).</p>
+     <p>In the case of the given two research questions, we need to keep track of changes of the queue length
+       and we need to be able to add up the service durations. For keeping track of queue length changes,
+       we need to consider all types of events that may change the queue length: <em>customer arrivals</em> and
+       <em>customer departures</em>. For being able to add up the service durations, we need to catch <em>service start</em>
+       and <em>service end events</em>.</p>
+     <p>After identifying the relevant event types, we can look for further simplification opportunities
+      by analyzing their possible temporal coincidence. Clearly, we can consider customer departures
+      to occur immediately after the corresponding service end events, without having any effects that
+      could not be merged. Therefore, we can drop service end events, and take care of their effects
+      (the cumulative service time computation) when handling the related customer departure event.</p>
+     <p>In addition, we can drop service start events, since they temporally coincide with customer
+      arrivals when the queue is empty, or otherwise (when the queue is not empty) they coincide
+      with service end (and, hence, with customer departure) events, because each service end event
+      causes a new service start event as long as the queue is not empty.</p>
+     <p>As a result of the above considerations, we get the following two types of events:</p>
+     <ul>
+       <li><b><code>CustomerArrival</code></b> with a reference property <code>serviceDesk</code> with range
+         <code>ServiceDesk</code>. As an exogenous event type, <code>CustomerArrival</code> has a
+         <code>recurrence</code> function representing a random variable for computing the time in-between
+         two subsequent event occurrences.</li>
+       <li><b><code>CustomerDeparture</code></b> with a reference property <code>serviceDesk</code> with range
+         <code>ServiceDesk</code>.</li>
+     </ul>
+     <p>Notice that, for simplicity, we consider the customer that is currently being served to be part of the queue.
+      In this way, in the simulation program, we can check if the service desk is busy by testing if the length of
+      the queue is greater than 0.</p>
+     <p>An alternative approach would be not considering the currently served customer as
+       part of the queue, but rather use a Boolean attribute <code>isBusy</code> for being able to keep track if the
+       service desk ist still busy with serving a customer.</p>
+     <p>The object types and event types described above, together with their participation associations
+       ("service desks participate in customer arrival events and in customer departure events"),
+       are visually described in the following UML class diagram:</p>
+     <figure>
+       <img src="media/img/IDM.svg" width="500">
+       <figcaption>An information design model describing object types and event types.</figcaption>
+     </figure>
+     <p>Notice how functions representing random variables, like <code>serviceDuration()</code> and <code>recurrence()</code>,
+       are marked with the keyword (or UML stereotype) «rv» standing for "random variable".</p>
+   </section>
+   <section><h1>Process Design Model <sup class="expl-req">?</sup></h1>
+     <div id="expl-PDM" class="expl"></div>
+     <table>
+       <caption>Event rule design table.</caption>
+       <thead>
+       <tr>
+         <td>ON (event type)</td><td>DO (event routine)</td>
+       </tr>
+       </thead>
+       <tbody>
+       <tr>
+         <td>CustomerArrival( sd) @ t</td>
+         <td style="font-size:smaller">
+           INCREMENT sd.queueLength<br>
+           IF sd.queueLength = 1<br>
+           THEN SCHEDULE CustomerDeparture( sd) @ (t + sd.serviceDuration())
+         </td>
+       </tr>
+       <tr>
+         <td>CustomerDeparture( sd) @ t</td>
+         <td style="font-size:smaller">
+           DECREMENT sd.queueLength<br>
+           IF sd.queueLength > 0<br>
+           THEN SCHEDULE CustomerDeparture( sd) @ (t + sd.serviceDuration())
+         </td>
+       </tr>
+       </tbody>
+     </table>
+     <table>
+       <caption>From conceptual event rule models to rule design models.</caption>
+       <thead>
+        <tr><th>Conceptual rule models</th><th>Rule design models</th></tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td><img src="media/img/Arrival_CRM.svg" width="250"></td>
+         <td><img src="media/img/Arrival_RDM.svg" width="450"></td>
+        </tr>
+        <tr>
+         <td><img src="media/img/ServiceStart_CRM.svg" width="250"></td>
+          <td rowspan="2"><img src="media/img/Departure_RDM.svg" width="450"></td>
+        </tr>
+        <tr>
+         <td><img src="media/img/ServiceEnd_CRM.svg" width="250"></td>
+        </tr>
+       </tbody>
+     </table>
+     <figure>
+       <img src="media/img/PDM.svg" width="700">
+       <figcaption>A process design model integrating both event rule design models.</figcaption>
+     </figure>
+   </section>
+ </section>
+
+ <section class="mbd collapsed"><h1><span>►</span>See also</h1>
+  <section><h1>Other OES Models for the Same System/Problem/Domain</h1>
+   <ol>
+     <!--
+     <li><a href="../1/index.html">ServiceDesk-1</a>: A service queue model
+       (one service and one queue) with two statistics: <i>maximum queue length</i> and <i>service utilization</i>.
+       The model abstracts away from individual customers and from the composition of the queue.</li>
+     -->
+     <li><a href="../2/index.html">ServiceDesk-2</a>: A service queue model
+       (one service and one queue) with one statistic: the Mean Response Time, which is the average length of time
+       a customer spends in the system from arrival to departure. For recording their arrival time, individual
+       customers are represented explicitly in a <i>waitingCustomers</i> queue.</li>
+     <li><a href="../3/index.html">ServiceDesk-3</a>: A service queue model where the service
+       is modeled as an activity with the service desk as its resource, for which the utilization statistics
+       is computed automatically.</li>
+     <li><a href="../12/index.html">ServiceDesk-4</a>: A service queue model where the
+       service desk is modeled as a processing node of a processing network that has an entry node and
+       an exit node for arriving and departing customers. The model is based on the pre-defined
+       <i>Processing Network</i> concepts: WorkObject, Arrival, EntryNode, ProcessingNode and ExitNode,
+       such that processing objects 'flow through the system'.</li>
+     <li><a href="../9/index.html">ConsecutiveServices</a>: An activity-based
+       service queue model of two consecutive service providers with customer waiting lines.</li>
+     <li><a href="../11/index.html">ProcessingNetwork-1</a>: A service queue model
+       where service providers are modeled as processing nodes (with input queues) within a processing network
+       that has an entry node and an exit node for arriving and departing customers. The model is based on
+       the pre-defined <i>Processing Network</i> concepts: WorkObject, Arrival, EntryNode, ProcessingNode and ExitNode,
+       such that processing objects 'flow through the system'.</li>
+   </ol>
+  </section>
+  <section><h1>Similar Models Implemented with Other Frameworks</h1>
+   <ol>
+     <li><a href="http://ccl.northwestern.edu/netlogo/models/community/Queueing_Simulation_Discrete_Event" target="_blank" rel="noopener">Queueing_Simulation_Discrete_Event</a>: This NetLogo simulation uses NetLogo's tick-advance primitive to advance simulation time by non-integral amounts. However, NetLogo's standard ticks display is unable to display non-integral values, so a custom ticks display has to be programmed. Copyright 2010, Nick Bennett.</li>
+   </ol>
+  </section>
+ </section>
+ <p><a href="index.html">Back to simulation</a></p>
+
+</div>
+        <footer>
+    <p>
+        Copyright © 2016-2019 G Wagner, M. Diaconescu and L.G. Nardin, Brandenburg University of Technology, Germany
+        <br>
+        <a href="about-us.html">About Us</a> | <a href="privacy-policy.html">Privacy Policy</a>
+    </p>
+</footer>
+</body>
+</html>

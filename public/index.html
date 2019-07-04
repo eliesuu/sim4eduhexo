@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en-US" xml:lang="en-US" >
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sim4edu - Web-Based Simulation for Science and Education</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="description" content="The Simulation for Education (sim4edu.com) project website supports web-based simulation with open source technologies for science and education. It provides both simulation technologies and a library of educational simulations.">
+    <!-- Facebook Open Graph annotations -->
+    <meta property="og:site_name" content="Sim4edu">
+    <meta property="og:title" content="Sim4edu - Web-Based Simulation for Science and Education">
+    <meta property="og:locale" content="en">
+    <meta property="og:locale:alternate" content="zh_Hans">
+    <meta property="og:locale:alternate" content="de">
+    <meta property="og:description" content="The Simulation for Education (sim4edu.com) project website supports web-based simulation with open source technologies for science and education. It provides both simulation technologies and a library of educational simulations.">
+    <meta property="og:url" content="https://sim4eduhexo.netlify.com/">
+    <meta property="og:image" content="../sim4edu.png">  <!-- recommended 1200 x 630 --> 
+    <!-- Google annotations -->
+    <script type="application/ld+json">{
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Brandenburg University of Technology",
+                    "logo": "https://www.b-tu.de/fileadmin/btu-cs/images/logo/BTULogo_englisch_grau.png"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Gerd Wagner",
+                    "image": {
+                        "@type": "ImageObject",
+                        "url": "https://ari123.com/media/img/GW.jpg",
+                        "width": 230,
+                        "height": 230
+                    },
+                    "url": "https://www.linkedin.com/in/gerdwagner/",
+                    "sameAs": []
+                },
+                "url": "https://sim4edu.com/",
+                "datePublished": "2018-05-04T00:00:00.000Z",
+                "dateModified": "2019-02-18T14:35:00.000Z",
+                "image": {
+                    "@type": "ImageObject",
+                    "url": "https://sim4edu.com/img/sim4edu.svg",
+                    "width": 1200,
+                    "height": 292
+                },
+                "keywords": "simulation, online simulation, web-based simulation, javascript-based simulation, educational simulation, instructional simulation, simulation education",
+                "description": "The Simulation for Education (sim4edu.com) project website supports web-based simulation with open source technologies for science and education. It provides both simulation technologies and a library of educational simulations."
+            }
+        </script>  
+    <link rel="icon" type="image/png" href="/img/icon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/img/icon-16x16.png" sizes="16x16">
+    <!-- Global site tag (gtag.js) - Google Analytics
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98612205-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-98612205-1', {'anonymize_ip':true});
+            </script>
+            -->
+            <link rel="stylesheet" href="/css/normalize.css">
+<link rel="stylesheet" href="/css/basic-styles.css">
+<link rel="stylesheet" href="/css/prio-menu.css">
+            
+                  
+                       
+                        <link rel="stylesheet" href="/css/ant.css">
+<link rel="stylesheet" href="/css/start-page.css">
+<link rel="stylesheet" href="/css/prio-menu.css">
+<link rel="stylesheet" href="/css/media-queries.css"> 
+                    
+                
+            
+</head> 
+
+  
+        <body>
+    
+        <header>
+    <div id="logo">
+        <a href="/"><img src="/img/sim4edu.svg" alt="Sim4edu logo"></a>
+    </div>
+    <div id="slogan">
+        Share your simulations. Use the power of the Web!
+    </div>
+    <div>
+        <label title="Select language">
+            <svg version="1.1" viewbox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" width="20" aria-labelledby="desc" role="img">
+                <desc>Globe icon for language selection</desc>
+                <path d="m67.399 12.109c-31.345-2.004-57.294 23.944-55.29 55.29 1.656 25.909 22.584 46.836 48.493 48.493 31.345 2.004 57.294-23.944 55.29-55.29-1.657-25.909-22.585-46.837-48.493-48.493zm20.146 77.693c2.045-7.026 3.266-15.108 3.43-23.802h20.975c-0.46 11.147-4.739 21.319-11.561 29.251-3.13-2.193-7.505-4.047-12.844-5.449zm-59.933 5.449c-6.822-7.932-11.102-18.104-11.561-29.251h20.975c0.163 8.694 1.384 16.776 3.43 23.802-5.341 1.403-9.716 3.256-12.844 5.449zm12.833-57.018c-2.04 7.019-3.257 15.088-3.42 23.767h-20.974c0.457-11.094 4.698-21.222 11.463-29.138 3.183 2.157 7.589 3.985 12.931 5.371zm21.555 23.767h-20.975c0.172-8.277 1.403-16.09 3.414-22.848 5.406 1.09 11.401 1.711 17.561 1.823v21.025zm0 4v21.026c-6.173 0.112-12.167 0.742-17.553 1.846-2.016-6.764-3.249-14.585-3.422-22.872h20.975zm4 0h20.975c-0.172 8.287-1.406 16.108-3.421 22.872-5.389-1.104-11.382-1.734-17.554-1.846v-21.026zm0-4v-21.026c6.16-0.111 12.155-0.733 17.561-1.823 2.011 6.759 3.242 14.572 3.414 22.849h-20.975zm0-25.025v-20.773c6.569 1.247 12.446 8.542 16.3 19.128-5.026 0.98-10.585 1.538-16.3 1.645zm-4-20.773v20.773c-5.715-0.107-11.274-0.665-16.3-1.645 3.854-10.586 9.731-17.882 16.3-19.128zm0 74.824v20.773c-6.565-1.246-12.438-8.532-16.292-19.106 5.009-0.994 10.566-1.559 16.292-1.667zm4 20.772v-20.772c5.725 0.108 11.281 0.673 16.292 1.667-3.854 10.573-9.727 17.86-16.292 19.105zm24.975-49.798c-0.163-8.679-1.38-16.748-3.419-23.767 5.342-1.387 9.748-3.214 12.93-5.371 6.765 7.915 11.006 18.044 11.463 29.138h-20.974zm6.746-32.121c-2.8 1.774-6.718 3.339-11.387 4.537-2.51-7.096-5.917-12.87-9.931-16.783 8.163 2.186 15.475 6.472 21.318 12.246zm-56.054 4.538c-4.669-1.198-8.587-2.763-11.387-4.537 5.842-5.775 13.155-10.06 21.319-12.246-4.015 3.912-7.423 9.687-9.932 16.783zm-11.286 63.801c2.74-1.8 6.628-3.387 11.298-4.6 2.508 7.08 5.911 12.842 9.919 16.749-8.117-2.174-15.391-6.425-21.217-12.149zm55.94-4.6c4.669 1.213 8.558 2.8 11.298 4.6-5.826 5.725-13.099 9.976-21.217 12.149 4.008-3.907 7.41-9.669 9.919-16.749z"/>
+            </svg>
+            <select id="languageSelect" onchange="s4e.switchLanguage()" aria-label="Language"></select>
+        </label>
+    </div>
+    <div id="navigation" class="priority-nav">
+        <nav id="menu">
+            <ul id="menu-closed">
+                <li><a href="/">Home</a></li>
+                <li><a href="/oes" title="Agent/Object Event Simulation">A/OES</a></li>
+                <li><a href="/simulations">Simulations</a></li>
+                <li><a href="/reading">Tutorials/Articles</a></li>
+                <li><a href="/downloads">Downloads</a></li>
+                <li><a href="/faq" title="Frequently Asked Questions">FAQ</a></li>
+                <li><a href="#menu-closed">&#215;</a></li>
+                <li><a href="#menu">&#9776;</a></li>
+            </ul>
+        </nav>
+    </div>    
+</header>
+        <div id="between-head-and-foot">
+    
+    <main>
+<section class="description"><h1>Web-Based Simulation for Science and Education</h1>
+<div>
+     <p>The <em>Simulation for Education (Sim4edu</em>) project website supports web-based simulation
+      with open source technologies for science and education. It provides both <b><i>simulation
+       technologies</i></b> and a <b><i>library of educational simulations</i></b>. Its goal is to support various
+      styles of modeling and simulation, including <em>discrete event</em> simulation,
+      <em>NetLogo</em>-style grid space models (and <em>Cellular Automata</em> models), and
+      <em>agent</em>-based simulation.</p>
+     <p>As opposed to traditional simulation technologies, <em>web-based</em> simulations,
+      typically implemented with JavaScript, can be executed in any web browser, not just on desktop
+      computers, but also on mobile devices like tablets and smartphones. This allows sharing
+      simulations by means of simple web links and makes them easily accessible to anyone anywhere.
+     </p>
+    </div>
+   </section>
+   <section class="sim-category" id="ad-hoc-sim">
+    <h1>Examples of ad-hoc simulation programs</h1>
+    <p>... not based on any simulation paradigm or framework.</p>
+    <dl>
+     <dt><a href="http://play.elevatorsaga.com" target="_blank" rel="noopener">Elevator Saga</a></dt>
+     <dd>Learning how to code by programming an elevator.</dd>
+     <dt><a href="http://www.natureincode.com/code/various/ants.html" target="_blank" rel="noopener">JavaScript Ants</a></dt>
+     <dd><img src="img/ant.svg" style="float:right; margin: 0 6px 0 1em;" width="50" id="ant">A simulation about ants finding food and bringing it back to the nest. Once an ant finds food, she leaves a chemical trail behind while walking back to the nest. The chemical substance evaporates over time, and other ants simply follow the gradient of the substance until they find the food.</dd>
+     <dt><a href="http://www.traffic-simulation.de/" target="_blank" rel="noopener">Roundabout</a></dt>
+     <dd>Microsimulation of traffic flow.</dd>
+    </dl>
+   </section>
+   <section class="sim-category" id="DES">
+    <h1>Examples of Discrete Event Simulation (DES) </h1>
+    <p>... with fixed-increment time progression.</p>
+    <dl>
+     <dt><a href="sims/25/index.html">Susceptible-Infected-Recovered (SIR) Disease Model</a></dt>
+     <dd>An epidemiological model about the infection dynamics of a contagious disease in a closed population.
+      See also <a href="https://insightmaker.com/insight/2944/SIR-Model" target="_blank" rel="noopener">a continuous SIR model</a>.</dd>
+    </dl>
+    <p>... with next-event time progression.</p>
+    <dl>
+     <dt><a href="sims/4/index.html">Inventory Management</a></dt><dd><img src="img/forklift.svg" style="float:right; margin: 4px 6px 0 1em;" width="60">An inventory
+     management system with a continuous replenishment policy based on a reorder point.</dd>
+     <dt><a href="sims/10/index.html">DriveThru</a></dt><dd><img src="img/drive-through-blue.svg" style="float:right; margin: 0 6px 0 1em" title="Icon CC 3.0 BY Freepik (www.freepik.com) from www.flaticon.com" width="70">The order processing activities of a drive through
+     restaurant are performed at three service points with queues: the <em>order taking</em> at the menu board, the <em>order preparation</em>
+     at the kitchen and the <em>order pickup</em> at the pickup window.</dd>
+     <dt><a href="sims/20/index.html">Lengnick's Baseline Economy</a></dt><dd><img src="img/factory.svg" style="float:right; margin: 0 6px 0 1em;" width="60"> <!-- /LengnickBaselineEconomy-1 -->
+     Households play the roles of em&shy;ploy&shy;ees and con&shy;sumers, while firms play the roles of employers and producers.</dd>
+    </dl>
+    <p><a href="des-models/index.html">More...</a></p>
+   </section>
+   <section class="sim-category" id="grid-space">
+    <h1>Examples of Grid Space Models</h1>
+    <p>... with fixed-increment time progression.</p>
+    <dl>
+     <dt><a href="sims/16/index.html">Gossip Model</a></dt>
+        <dd>A Cellular Automata model about the problem of spreading gossip.</dd>
+     <dt><a href="sims/6/index.html">Schelling Segregation Model</a></dt>
+        <dd><img src="img/SchellingGrid.png" style="float:right; margin: 6px 6px 0 1em;" width="46" height="59">
+         A residential area is popu&shy;lated by resi&shy;dents belonging to different groups. Periodically, all
+      residents check if they are content with their neighborhood, based on their degree of
+      tolerating neighbors of a different group. If they are not, they move to a location where they
+      are content, or leave the area if they don't find such a location.</dd>
+    </dl>
+    <p><a href="gridspace-models/index.html">More...</a></p>
+   </section>
+   <section class="sim-category" id="contin">
+    <h1>Examples of Continuous Simulation</h1>
+    <p>... with continuous state changes driven by fixed-increment time progression.</p>
+    <dl>
+      <dt><a href="sims/15/index.html">Solar System</a></dt><dd>Implemented with CSS 3D animations.</dd>
+      <dt><a href="https://29a.ch/sandbox/2010/galaxy/" target="_blank" rel="noopener">Galaxy</a></dt><dd>A spiral galaxy with
+      5000 stars (by Jonas Wagner, 2010-08-18).</dd>
+     <dt><a href="https://insightmaker.com/insight/1954/The-World3-Model" target="_blank" rel="noopener">World3</a></dt>
+     <dd>A <em>System Dynamics</em> model of the interactions between population, industrial growth, food production
+      and limits in the ecosystems of the Earth. Reconstructed with <a href="https://insightmaker.com/" target="_blank" rel="noopener">Insight Maker</a>.</dd>
+    </dl>
+    <p><a href="continuous-models/index.html">More...</a></p>
+   </section>
+  </main>
+  <aside><h1>News...</h1>
+   <ul>
+    <li>8-Apr-2019: We are looking for <strong>volunteer translators</strong> to Spanish, Brazilian, French or any language you'd like to support. 
+     Please <a href="mailto:G.Wagner@b-tu.de?subject=Sim4edu%20Translation&body=Hi%20guys!%0D%0AI'd%20like%20to%20help%20with%20translating%20Sim4edu%20to%20..." target="_blank" rel="noopener">contact us</a> 
+     if you can help  with this.</li>
+    <li>3-Apr-2019: The Sim4edu website and its OESjs simulations has been internationalized: now also available in
+     Chinese and in German (soon).</li>
+    <li>8-Jan-2019: OESjs 1.3e has been released: solving issues with Processing Network simulation and adding summary statistics to experiments.</li>
+    <li>19-Sep-2018: OESjs 1.3c has been released: additional user interfaces for inspecting code, initial events and experiments.</li>
+    <li>28-July-2018: OESjs 1.3b has been released. Now supporting a user interface for setting model variables.</li>
+    <li>9-May-2018: OESjs 1.3a has been released. It allows defining simulation experiments and runs faster due to running the simulator in its own (worker) thread.</li>
+    <li>4-May-2018: The Sim4edu website has moved to Netlify</li>
+   </ul>
+</aside>
+</div>
+        <footer>
+    <p>
+        Copyright © 2016-2019 G Wagner, M. Diaconescu and L.G. Nardin, Brandenburg University of Technology, Germany
+        <br>
+        <a href="about-us.html">About Us</a> | <a href="privacy-policy.html">Privacy Policy</a>
+    </p>
+</footer>
+</body>
+</html>

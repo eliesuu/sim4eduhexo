@@ -1,0 +1,297 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="1280.000000pt" height="1280.000000pt" viewBox="0 0 1280.000000 1280.000000"
+ preserveAspectRatio="xMidYMid meet"
+>
+
+<g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+fill="grey" stroke="none">
+
+<path d="M10167 9943 c-4 -3 -7 -957 -7 -2119 l0 -2113 -437 244 c-241 134
+-1000 558 -1688 943 l-1250 698 -3 -782 -2 -783 -73 33 c-39 19 -538 257
+-1107 531 -2028 974 -2201 1057 -2205 1054 -1 -2 3 -278 11 -614 7 -335 13
+-672 14 -747 l0 -137 -1316 789 c-723 435 -1320 790 -1325 790 -5 0 -9 -1339
+-9 -3405 l0 -3406 -35 -52 -35 -52 72 -12 c140 -24 502 -33 1663 -43 1315 -11
+8382 -14 9316 -3 l606 6 7 1041 c3 573 11 1632 17 2354 6 723 8 1316 5 1319
+-3 3 -78 9 -168 14 -90 5 -369 20 -622 34 -252 13 -460 26 -463 28 -4 5 -20
+1749 -28 3177 -3 569 -8 1077 -11 1128 l-6 92 -457 0 c-252 0 -461 -3 -464 -7z"/>
+</g>
+
+<g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+fill="grey" stroke="none" id="cloud">
+<circle id="circle1" cx="10450" cy="9200" r="250" />
+<circle id="circle2" cx="10550" cy="9200" r="200" />
+<circle id="circle3" cx="10750" cy="8900" r="250" />
+<circle id="circle4" cx="10880" cy="9200" r="200" />
+<circle id="circle5" cx="10600" cy="9400" r="250" />
+<circle id="circle6" cx="10500" cy="8900" r="200" />
+<circle id="circle7" cx="10600" cy="8700" r="200" />
+</g>
+
+<g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+fill="grey" stroke="none" id="cloudnull">
+<circle cx="10650" cy="9200" r="450" />
+</g>
+<g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+fill="grey" stroke="none" id="cloudleft">
+<circle cx="10650" cy="9000" r="450" />
+</g>
+<g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+fill="grey" stroke="none" id="cloudright">
+<circle cx="10650" cy="9000" r="450" />
+</g>
+<g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+fill="grey" stroke="none" id="cloud1">
+<circle cx="10650" cy="9000" r="450" />
+</g>
+<g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+fill="grey" stroke="none" id="cloud2">
+<circle cx="10650" cy="9000" r="450" />
+</g>
+<g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+fill="grey" stroke="none" id="cloud3">
+<circle cx="10650" cy="9000" r="450" />
+</g>
+<g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+fill="grey" stroke="none" id="cloud4">
+<circle cx="10650" cy="9000" r="450" />
+</g>
+<g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+fill="grey" stroke="none" id="cloud5">
+<circle cx="10650" cy="9000" r="450" />
+</g>
+<g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+fill="grey" stroke="none" id="cloud6">
+<circle cx="10650" cy="9000" r="450" />
+</g>
+<g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+fill="grey" stroke="none" id="cloud7">
+<circle cx="10650" cy="9000" r="450" />
+</g>
+<g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+fill="grey" stroke="none" id="cloud8">
+<circle cx="10650" cy="9000" r="450" />
+</g>
+<g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+fill="grey" stroke="none" id="cloud9">
+<circle cx="10650" cy="9000" r="450" />
+</g>
+<g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+fill="grey" stroke="none" id="cloud10">
+<circle cx="10650" cy="9000" r="450" />
+</g>
+<g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+fill="grey" stroke="none" id="cloud11">
+<circle cx="10650" cy="9000" r="450" />
+</g>
+<g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+fill="grey" stroke="none" id="cloud12">
+<circle cx="10650" cy="9000" r="450" />
+</g>
+<g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+fill="grey" stroke="none" id="cloud13">
+<circle cx="10650" cy="9000" r="450" />
+</g>
+<g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+fill="grey" stroke="none" id="cloud14">
+<circle cx="10650" cy="9000" r="450" />
+</g>
+<g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+fill="grey" stroke="none" id="cloud15">
+<circle cx="10650" cy="9000" r="450" />
+</g>
+<g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+fill="grey" stroke="none" id="cloud16">
+<circle cx="10650" cy="9000" r="450" />
+</g>
+
+
+
+<g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)" stroke="grey" >
+<path id="motionPathleft" fill="grey" stroke="#000000" stroke-miterlimit="10" 
+d="M0 0 v-120 c -300,-180 -250,-250 -1100,-350"/>
+</g>
+<g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)" stroke="grey" >
+<path id="motionPathmiddle" fill="grey" stroke="#000000" stroke-miterlimit="10" 
+d="M0 0 v-120 c -200,-200 -300,-300 -1100,-380"/>
+</g>
+<g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)" stroke="grey" >
+<path id="motionPathright" fill="grey" stroke="#000000" stroke-miterlimit="10" 
+d="M0 0 v-120 c -100,-230 -340,-350 -1100,-400"/>
+</g>
+
+
+
+
+<animateMotion 
+           xlink:href="#cloud1"
+           dur="4s"
+	   begin="20.1s"
+           fill="freeze"
+	   repeatCount="3"
+	   >
+   <mpath xlink:href="#motionPathleft" />
+  </animateMotion>	   
+           />
+<animateMotion 
+           xlink:href="#cloud2"
+           dur="4s"
+	   begin="20s"
+           fill="freeze"
+	   repeatCount="3"
+	   >
+   <mpath xlink:href="#motionPathmiddle" />
+  </animateMotion>	   
+           />
+<animateMotion 
+           xlink:href="#cloud3"
+           dur="4s"
+	   begin="20.1s"
+           fill="freeze"
+	   repeatCount="3"
+	   >
+   <mpath xlink:href="#motionPathright" />
+  </animateMotion>	   
+           />
+
+<animateMotion 
+           xlink:href="#cloud4"
+           dur="4s"
+	   begin="20.25s"
+           fill="freeze"
+	   repeatCount="3"
+	   >
+   <mpath xlink:href="#motionPathleft" />
+  </animateMotion>	   
+           />
+<animateMotion 
+           xlink:href="#cloud5"
+           dur="4s"
+	   begin="20.2s"
+           fill="freeze"
+	   repeatCount="3"
+	   >
+   <mpath xlink:href="#motionPathmiddle" />
+  </animateMotion>	   
+           />
+<animateMotion 
+           xlink:href="#cloud6"
+           dur="4s"
+	   begin="20.3s"
+           fill="freeze"
+	   repeatCount="3"
+	   >
+   <mpath xlink:href="#motionPathright" />
+  </animateMotion>	   
+           />
+
+<animateMotion 
+           xlink:href="#cloud7"
+           dur="4s"
+	   begin="20.5s"
+           fill="freeze"
+	   repeatCount="3"
+	   >
+   <mpath xlink:href="#motionPathleft" />
+  </animateMotion>	   
+           />
+<animateMotion 
+           xlink:href="#cloud8"
+           dur="4s"
+	   begin="20.4s"
+           fill="freeze"
+	   repeatCount="3"
+	   >
+   <mpath xlink:href="#motionPathmiddle" />
+  </animateMotion>	   
+           />
+<animateMotion 
+           xlink:href="#cloud9"
+           dur="4s"
+	   begin="20.5s"
+           fill="freeze"
+	   repeatCount="3"
+	   >
+   <mpath xlink:href="#motionPathright" />
+  </animateMotion>	   
+           />
+
+<animateMotion 
+           xlink:href="#cloud10"
+           dur="4s"
+	   begin="20.7s"
+           fill="freeze"
+	   repeatCount="3"
+	   >
+   <mpath xlink:href="#motionPathleft" />
+  </animateMotion>	   
+           />
+<animateMotion 
+           xlink:href="#cloud11"
+           dur="4s"
+	   begin="20.6s"
+           fill="freeze"
+	   repeatCount="3"
+	   >
+   <mpath xlink:href="#motionPathmiddle" />
+  </animateMotion>	   
+           />
+<animateMotion 
+           xlink:href="#cloud12"
+           dur="4s"
+	   begin="20.7s"
+           fill="freeze"
+	   repeatCount="3"
+	   >
+   <mpath xlink:href="#motionPathright" />
+  </animateMotion>	   
+           />
+
+<animateMotion 
+           xlink:href="#cloud13"
+           dur="4s"
+	   begin="20.9s"
+           fill="freeze"
+	   repeatCount="3"
+	   >
+   <mpath xlink:href="#motionPathleft" />
+  </animateMotion>	   
+           />
+<animateMotion 
+           xlink:href="#cloud14"
+           dur="4s"
+	   begin="20.8s"
+           fill="freeze"
+	   repeatCount="3"
+	   >
+   <mpath xlink:href="#motionPathmiddle" />
+  </animateMotion>	   
+           />
+<animateMotion 
+           xlink:href="#cloud15"
+           dur="4s"
+	   begin="20.9s"
+           fill="freeze"
+	   repeatCount="3"
+	   >
+   <mpath xlink:href="#motionPathright" />
+  </animateMotion>	   
+           />
+
+<animateMotion 
+           xlink:href="#cloud16"
+           dur="4s"
+	   begin="21s"
+           fill="freeze"
+	   repeatCount="3"
+	   >
+   <mpath xlink:href="#motionPathmiddle" />
+  </animateMotion>
+           />
+</svg>
+        
+
