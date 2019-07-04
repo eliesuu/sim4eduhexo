@@ -2,13 +2,23 @@
 <html lang="en-US" xml:lang="en-US" >
 <%- partial('partial/head') %>
 
-<% if (page.layout==='description') { %>
+<% if (page.layout==='sims')  { %>
+    <body>
+    <%- partial('partial/headersim') %>
+    <%- body %>
+    <%- partial('partial/footersim') %>
+<%} else {%>  
+    <% if (page.layout==='description')  { %>
         <body onload="oes.ui.setupDescription()">
-    <%} else {%>  
+        <%- partial('partial/headerdesc') %>
+        <%- body %>
+        <%- partial('partial/footerdesc') %>
+    <%} else {%>   
         <body>
-    <%} %>
         <%- partial('partial/header') %>
         <%- body %>
         <%- partial('partial/footer') %>
+    <%} %>
+<%} %>
 </body>
 </html>

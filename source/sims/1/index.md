@@ -1,12 +1,7 @@
 ---
 layout: sims
+title: A Service Queue Model with Utilization and Maximum Queue Length Statistics
 ---
-<div id="frontMatter">
- <div id="sim4eduinfo">Created with the <i>Object Event Simulation (OES)</i> framework <b><i>OESjs</i></b> available from
-  <a href='https://sim4edu.com'>sim4edu.com</a>.</div>
- <h1>A Service Queue Model with Utilization and Maximum Queue Length Statistics<a href="description.html">Read more...</a></h1>
-</div>
-<main>
  <div id="model-menu">
   <button type='button' onclick='oes.ui.showNarrative()'>Narrative</button>
   <button type='button' onclick='oes.ui.showDescription()'>Description</button>
@@ -16,13 +11,13 @@ layout: sims
 <noscript>
  <p>Please turn on JavaScript in your browser. Otherwise you cannot run Sim4edu simulations.</p>
 </noscript>
-<script src="/js/1/metadata.js"></script>
-<script src="/js/framework/frontMatter.js"></script>
+<script src="metadata.js"></script>
+<script src="../framework/frontMatter.js"></script>
 <!-- load common core JS code files -->
-<script src="/js/framework/simulator-core.js" async="async"></script>
-<script src="/js/framework/chartist.js" async="async"></script>
+<script src="../framework/simulator-core.js" async="async"></script>
+<script src="../framework/chartist.js" async="async"></script>
 <!-- load scenario.js and all files required by it, and set up the user interface -->
-<script src="/js/loadManager.js"></script>
+<script src="../loadManager.js"></script>
 <!-- load scenario.js and all files required by it, and set up the user interface -->
 
 

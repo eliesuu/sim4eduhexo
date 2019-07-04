@@ -48,8 +48,8 @@
                 "description": "The Simulation for Education (sim4edu.com) project website supports web-based simulation with open source technologies for science and education. It provides both simulation technologies and a library of educational simulations."
             }
         </script>  
-    <link rel="icon" type="image/png" href="/img/icon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/img/icon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="img/icon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/icon-16x16.png" sizes="16x16">
     <!-- Global site tag (gtag.js) - Google Analytics
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98612205-1"></script>
         <script>
@@ -59,18 +59,31 @@
             gtag('config', 'UA-98612205-1', {'anonymize_ip':true});
             </script>
             -->
-            <%- css(['css/normalize.css', 'css/basic-styles.css', 'css/prio-menu.css']) %>
+
             <% if (page.layout==='area-page') { %>
-                <%- css(['css/area-page.css', 'css/prio-menu.css', 'css/media-queries.css']) %> 
+                <link rel="stylesheet" href="../css/normalize.css">
+                <link rel="stylesheet" href="../css/basic-styles.css">
+                <link rel="stylesheet" href="../css/prio-menu.css">
+                <link rel="stylesheet" href="../css/area-page.css">
+                <link rel="stylesheet" href="../css/prio-menu.css">
+                <link rel="stylesheet" href="../css/media-queries.css"> 
             <%} else {%>
                 <% if (page.layout==='sims')  { %>
-                    <%- css(['css/sims/simulator-core.css', 'css/sims/chartist.css', 'css/prio-menu.css', 'css/sims/mq-simulation-page.css']) %> 
+                    <link rel="stylesheet" href="../framework/chartist.css">
+                    <link rel="stylesheet" href="../framework/simulator-core.css">
                 <%} else {%>  
                     <% if (page.layout==='description')  { %>
-                        <%- css(['css/sims/description.css', 'css/prio-menu.css', 'css/sims/mq-description.css', ]) %> 
-                        <%- js(['js/1/metadata.js', 'js/framework/description.js']) %>
+                        <link rel="stylesheet" href="../framework/description.css">
+                        <script src="metadata.js"></script>
+                        <script src="../framework/description.js"></script>
                     <%} else {%>   
-                        <%- css(['css/ant.css', 'css/start-page.css', 'css/prio-menu.css', 'css/media-queries.css']) %> 
+                        <link rel="stylesheet" href="css/normalize.css">
+                        <link rel="stylesheet" href="css/basic-styles.css">
+                        <link rel="stylesheet" href="css/prio-menu.css">
+                        <link rel="stylesheet" href="css/ant.css">
+                        <link rel="stylesheet" href="css/start-page.css">
+                        <link rel="stylesheet" href="css/prio-menu.css">
+                        <link rel="stylesheet" href="css/media-queries.css"> 
                     <%} %>
                 <%} %>
             <%} %>

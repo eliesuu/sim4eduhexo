@@ -1,6 +1,10 @@
 <header>
     <div id="logo">
-        <a href="/"><img src="/img/sim4edu.svg" alt="Sim4edu logo"/></a>
+        <% if (page.layout==='area-page') { %>
+            <a href="../"><img src="../img/sim4edu.svg" alt="Sim4edu logo"/></a>
+        <%} else {%>
+            <a href="/"><img src="img/sim4edu.svg" alt="Sim4edu logo"/></a>
+        <%} %>
     </div>
     <div id="slogan">
         Share your simulations. Use the power of the Web!
@@ -17,14 +21,25 @@
     <div id="navigation" class="priority-nav">
         <nav id="menu">
             <ul id="menu-closed">
-                <li><a href="/">Home</a></li>
-                <li><a href="/oes" title="Agent/Object Event Simulation">A/OES</a></li>
-                <li><a href="/simulations">Simulations</a></li>
-                <li><a href="/reading">Tutorials/Articles</a></li>
-                <li><a href="/downloads">Downloads</a></li>
-                <li><a href="/faq" title="Frequently Asked Questions">FAQ</a></li>
-                <li><a href="#menu-closed">&#215;</a></li>
-                <li><a href="#menu">&#9776;</a></li>
+                <% if (page.layout==='area-page') { %>
+                    <li><a href="../">Home</a></li>
+                    <li><a href="../oes" title="Agent/Object Event Simulation">A/OES</a></li>
+                    <li><a href="../simulations">Simulations</a></li>
+                    <li><a href="../reading">Tutorials/Articles</a></li>
+                    <li><a href="../downloads">Downloads</a></li>
+                    <li><a href="../faq" title="Frequently Asked Questions">FAQ</a></li>
+                    <li><a href="#menu-closed">&#215;</a></li>
+                    <li><a href="#menu">&#9776;</a></li>
+                <%} else {%>
+                    <li><a href="">Home</a></li>
+                    <li><a href="oes" title="Agent/Object Event Simulation">A/OES</a></li>
+                    <li><a href="simulations">Simulations</a></li>
+                    <li><a href="reading">Tutorials/Articles</a></li>
+                    <li><a href="downloads">Downloads</a></li>
+                    <li><a href="faq" title="Frequently Asked Questions">FAQ</a></li>
+                    <li><a href="#menu-closed">&#215;</a></li>
+                    <li><a href="#menu">&#9776;</a></li>
+                <%} %>
             </ul>
         </nav>
     </div>    
