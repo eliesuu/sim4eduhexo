@@ -26,7 +26,7 @@ lang: en
      <dt><a href="http://play.elevatorsaga.com">Elevator Saga</a></dt>
      <dd>Learning how to code by programming an elevator.</dd>
      <dt><a href="http://www.natureincode.com/code/various/ants.html">JavaScript Ants</a></dt>
-     <dd><img src="img/ant.svg" style="float:right; margin: 0 6px 0 1em;" width="50" id="ant" />A simulation about ants finding food and bringing it back to the nest. Once an ant finds food, she leaves a chemical trail behind while walking back to the nest. The chemical substance evaporates over time, and other ants simply follow the gradient of the substance until they find the food.</dd>
+     <dd><img src="img/ant.svg" style="float:right; margin: 0 6px 0 1em;" width="50" id="ant" alt="ant icon" />A simulation about ants finding food and bringing it back to the nest. Once an ant finds food, she leaves a chemical trail behind while walking back to the nest. The chemical substance evaporates over time, and other ants simply follow the gradient of the substance until they find the food.</dd>
      <dt><a href="http://www.traffic-simulation.de/">Roundabout</a></dt>
      <dd>Microsimulation of traffic flow.</dd>
     </dl>
@@ -41,13 +41,13 @@ lang: en
     </dl>
     <p>... with next-event time progression.</p>
     <dl>
-     <dt><a href="sims/4/index.html">Inventory Management</a></dt><dd><img src="img/forklift.svg" style="float:right; margin: 4px 6px 0 1em;" width="60" />An inventory
+     <dt><a href="sims/4/index.html">Inventory Management</a></dt><dd><img src="img/forklift.svg" style="float:right; margin: 4px 6px 0 1em;" width="60" alt="forklift icon" />An inventory
      management system with a continuous replenishment policy based on a reorder point.</dd>
-     <dt><a href="sims/10/index.html">DriveThru</a></dt><dd><img src="img/drive-through-blue.svg" style="float:right; margin: 0 6px 0 1em"
+     <dt><a href="sims/10/index.html">DriveThru</a></dt><dd><img src="img/drive-through-blue.svg" alt="drive through icon" style="float:right; margin: 0 6px 0 1em"
                                                                  title="Icon CC 3.0 BY Freepik (www.freepik.com) from www.flaticon.com" width="70" />The order processing activities of a drive through
      restaurant are performed at three service points with queues: the <em>order taking</em> at the menu board, the <em>order preparation</em>
      at the kitchen and the <em>order pickup</em> at the pickup window.</dd>
-     <dt><a href="sims/20/index.html">Lengnick's Baseline Economy</a></dt><dd><img src="img/factory.svg" style="float:right; margin: 0 6px 0 1em;" width="60" /> <!-- /LengnickBaselineEconomy-1 -->
+     <dt><a href="sims/20/index.html">Lengnick's Baseline Economy</a></dt><dd><img src="img/factory.svg" alt="factory icon" style="float:right; margin: 0 6px 0 1em;" width="60" /> <!-- /LengnickBaselineEconomy-1 -->
      Households play the roles of em&shy;ploy&shy;ees and con&shy;sumers, while firms play the roles of employers and producers.</dd>
     </dl>
     <p><a href="des-models/index.html">More...</a></p>
@@ -59,7 +59,7 @@ lang: en
      <dt><a href="sims/16/index.html">Gossip Model</a></dt>
 	    <dd>A Cellular Automata model about the problem of spreading gossip.</dd>
      <dt><a href="sims/6/index.html">Schelling Segregation Model</a></dt>
-	    <dd><img src="img/SchellingGrid.png" style="float:right; margin: 6px 6px 0 1em;" width="46" height="59" />
+	    <dd><img src="img/SchellingGrid.png" style="float:right; margin: 6px 6px 0 1em;" width="46" height="59" alt="schelling grid icon" />
 	     A residential area is popu&shy;lated by resi&shy;dents belonging to different groups. Periodically, all
       residents check if they are content with their neighborhood, based on their degree of
       tolerating neighbors of a different group. If they are not, they move to a location where they

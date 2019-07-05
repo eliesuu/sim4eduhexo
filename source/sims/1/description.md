@@ -44,7 +44,7 @@ lang: en
      <p>Both object types and event types, together with their participation associations, can be visually described in
        a UML class diagram, as shown below.</p>
      <figure>
-       <img src="media/img/CIM.svg" width="600"/>
+       <img src="media/img/CIM.svg" width="600" alt="cim"/>
        <figcaption>A conceptual information model describing object types and event types.</figcaption>
      </figure>
    </section>
@@ -64,25 +64,25 @@ lang: en
          <td>customer arrival</td>
          <td>If the service desk is busy, then the new customer queues up,
            else the service starts.</td>
-         <td><img src="media/img/Arrival_CRM.svg" width="250"/></td>
+         <td><img src="media/img/Arrival_CRM.svg" width="250" alt="arrival crm"/></td>
        </tr>
        <tr>
          <td>service start</td>
          <td>After some time, the service ends.</td>
-         <td><img src="media/img/ServiceStart_CRM.svg" width="250"/></td>
+         <td><img src="media/img/ServiceStart_CRM.svg" width="250" alt="service start crm"/></td>
        </tr>
        <tr>
          <td>service end</td>
          <td>The served customer departs. If there are still customers waiting in the queue,
            then the next service starts.</td>
-         <td><img src="media/img/ServiceEnd_CRM.svg" width="250"/></td>
+         <td><img src="media/img/ServiceEnd_CRM.svg" width="250" alt="service end crm"/></td>
        </tr>
        </tbody>
      </table>
      <p>The involved types of events can be related with each other via their (possibly conditional) temporal succession,
       as visualized in the following BPMN process diagram:</p>
      <figure>
-       <img src="media/img/CPM.svg" width="600"/>
+       <img src="media/img/CPM.svg" width="600" alt="cpm"/>
        <figcaption>A conceptual process diagram integrating the event rule diagrams.</figcaption>
      </figure>
    </section>
@@ -144,7 +144,7 @@ lang: en
        ("service desks participate in customer arrival events and in customer departure events"),
        are visually described in the following UML class diagram:</p>
      <figure>
-       <img src="media/img/IDM.svg" width="500"/>
+       <img src="media/img/IDM.svg" width="500" alt="idm"/>
        <figcaption>An information design model describing object types and event types.</figcaption>
      </figure>
      <p>Notice how functions representing random variables, like <code>serviceDuration()</code> and <code>recurrence()</code>,
@@ -185,20 +185,20 @@ lang: en
        </thead>
        <tbody>
         <tr>
-         <td><img src="media/img/Arrival_CRM.svg" width="250"/></td>
-         <td><img src="media/img/Arrival_RDM.svg" width="450"/></td>
+         <td><img src="media/img/Arrival_CRM.svg" width="250" alt="arrival crm"/></td>
+         <td><img src="media/img/Arrival_RDM.svg" width="450" alt="arrival rdm"/></td>
         </tr>
         <tr>
          <td><img src="media/img/ServiceStart_CRM.svg" width="250"/></td>
-          <td rowspan="2"><img src="media/img/Departure_RDM.svg" width="450"/></td>
+          <td rowspan="2"><img src="media/img/Departure_RDM.svg" width="450" alt="departure rdm"/></td>
         </tr>
         <tr>
-         <td><img src="media/img/ServiceEnd_CRM.svg" width="250"/></td>
+         <td><img src="media/img/ServiceEnd_CRM.svg" width="250" alt="service end crm"/></td>
         </tr>
        </tbody>
      </table>
      <figure>
-       <img src="media/img/PDM.svg" width="700"/>
+       <img src="media/img/PDM.svg" width="700" alt="pdm"/>
        <figcaption>A process design model integrating both event rule design models.</figcaption>
      </figure>
    </section>
