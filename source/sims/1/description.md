@@ -5,10 +5,10 @@ metatitle: Single Service Desk Queueing System Model  | sim4edu.com
 metadesc: A service queue model with two statistics maximum queue length and service utilization. The model uses abstract time & abstracts away from individual customers
 lang: en
 ---
-  <section class="mbd collapsed"><h1><span>►</span>Conceptual Model <sup class="expl-req">?</sup></h1>
+  <section class="mbd collapsed"><h2><span>►</span>Conceptual Model <sup class="expl-req">?</sup></h2>
    <div id="expl-CM" class="expl"></div>
 
-   <section><h1>Conceptual Information Model <sup class="expl-req">?</sup></h1>
+   <section><h3>Conceptual Information Model <sup class="expl-req">?</sup></h3>
      <div id="expl-CIM" class="expl"></div>
      <p>The potentially relevant object types are:</p>
 <!--
@@ -50,7 +50,7 @@ lang: en
    </section>
 
    <section>
-     <h1>Conceptual Process Model <sup class="expl-req">?</sup></h1>
+     <h3>Conceptual Process Model <sup class="expl-req">?</sup></h3>
      <div id="expl-CPM" class="expl"></div>
      <table>
        <caption>Event rules.</caption>
@@ -88,10 +88,10 @@ lang: en
    </section>
  </section>
 
- <section class="mbd collapsed"><h1><span>►</span>Simulation Design Model <sup class="expl-req">?</sup></h1>
+ <section class="mbd collapsed"><h2><span>►</span>Simulation Design Model <sup class="expl-req">?</sup></h2>
    <div id="expl-DM" class="expl"></div>
 
-   <section><h1>Information Design Model <sup class="expl-req">?</sup></h1>
+   <section><h3>Information Design Model <sup class="expl-req">?</sup></h3>
      <div id="expl-IDM" class="expl"></div>
      <p>In the current simulation project, the purpose of the simulation model is to compute two statistics:
        the <em>service utilization</em> and <em>the maximum queue length</em>. We may therefore abstract away from many
@@ -150,7 +150,7 @@ lang: en
      <p>Notice how functions representing random variables, like <code>serviceDuration()</code> and <code>recurrence()</code>,
        are marked with the keyword (or UML stereotype) «rv» standing for "random variable".</p>
    </section>
-   <section><h1>Process Design Model <sup class="expl-req">?</sup></h1>
+   <section><h3>Process Design Model <sup class="expl-req">?</sup></h3>
      <div id="expl-PDM" class="expl"></div>
      <table>
        <caption>Event rule design table.</caption>
@@ -204,8 +204,8 @@ lang: en
    </section>
  </section>
 
- <section class="mbd collapsed"><h1><span>►</span>See also</h1>
-  <section><h1>Other OES Models for the Same System/Problem/Domain</h1>
+ <section class="mbd collapsed"><h2><span>►</span>See also</h2>
+  <section><h3>Other OES Models for the Same System/Problem/Domain</h3>
    <ol>
      <!--
      <li><a href="../1/index.html">ServiceDesk-1</a>: A service queue model
@@ -233,7 +233,7 @@ lang: en
        such that processing objects 'flow through the system'.</li>
    </ol>
   </section>
-  <section><h1>Similar Models Implemented with Other Frameworks</h1>
+  <section><h2>Similar Models Implemented with Other Frameworks</h2>
    <ol>
      <li><a href="http://ccl.northwestern.edu/netlogo/models/community/Queueing_Simulation_Discrete_Event">Queueing_Simulation_Discrete_Event</a>: This NetLogo simulation uses NetLogo's tick-advance primitive to advance simulation time by non-integral amounts. However, NetLogo's standard ticks display is unable to display non-integral values, so a custom ticks display has to be programmed. Copyright 2010, Nick Bennett.</li>
    </ol>
