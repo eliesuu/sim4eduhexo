@@ -10,16 +10,5 @@ metadesc: A service queue model (one service and one queue) with two statistics 
   <button id='showCodeBtn' type='button' onclick='oes.ui.showCode()'>Code</button>
  </div>
 </main>
-<noscript>
- <p>Please turn on JavaScript in your browser. Otherwise you cannot run Sim4edu simulations.</p>
-</noscript>
-<script src="metadata.js"></script>
-<script src="../framework/frontMatter.js"></script>
-<!-- load common core JS code files -->
-<script src="../framework/simulator-core.js" async="async"></script>
-<script src="../framework/chartist.js" async="async"></script>
-<!-- load scenario.js and all files required by it, and set up the user interface -->
-<script src="../loadManager.js"></script>
-<!-- load scenario.js and all files required by it, and set up the user interface -->
 
 

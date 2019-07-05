@@ -238,4 +238,3 @@ metadesc: A service queue model (one service and one queue) with two statistics 
    </ol>
   </section>
  </section>
- <p><a href="index.html">Back to simulation</a></p>
