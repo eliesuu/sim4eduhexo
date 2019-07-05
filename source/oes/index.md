@@ -1,12 +1,12 @@
 ---
 layout: area-page
 title: Object Event Modeling And Simulation
-metatitle: Object Event Modeling And Simulation | sim4edu.com
+metatitle: Object Event Modeling And Simulation - OESjs  | sim4edu.com
 metadesc: About Object Event Modeling and Simulation, a general Discrete Event Simulation approach. Sim4edu provides the OESjs simulation framework.
 lang: en
 ---
 <aside>
-<h3>Papers</h3>
+<h2>Papers</h2>
 	 <dl style="padding-left:0"><dt>OEM</dt>
 		<dd>Gerd Wagner. <a href="https://articles.jsime.org/1/1/">Information and Process Modeling for Simulation – Part I: Objects and Events</a>. <em>Journal of Simulation Engineering</em> 1:1, 2018.</dd>
 		<dt>OES</dt>

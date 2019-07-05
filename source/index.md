@@ -20,7 +20,7 @@ lang: en
     </div>
    </section>
    <section class="sim-category" id="ad-hoc-sim">
-    <h1>Examples of ad-hoc simulation programs</h1>
+    <h2>Examples of ad-hoc simulation programs</h2>
     <p>... not based on any simulation paradigm or framework.</p>
     <dl>
      <dt><a href="http://play.elevatorsaga.com">Elevator Saga</a></dt>
@@ -32,7 +32,7 @@ lang: en
     </dl>
    </section>
    <section class="sim-category" id="DES">
-    <h1>Examples of Discrete Event Simulation (DES) </h1>
+    <h2>Examples of Discrete Event Simulation (DES) </h2>
     <p>... with fixed-increment time progression.</p>
     <dl>
      <dt><a href="sims/25/index.html">Susceptible-Infected-Recovered (SIR) Disease Model</a></dt>
@@ -53,7 +53,7 @@ lang: en
     <p><a href="des-models/index.html">More...</a></p>
    </section>
    <section class="sim-category" id="grid-space">
-    <h1>Examples of Grid Space Models</h1>
+    <h2>Examples of Grid Space Models</h2>
     <p>... with fixed-increment time progression.</p>
     <dl>
      <dt><a href="sims/16/index.html">Gossip Model</a></dt>
@@ -68,7 +68,7 @@ lang: en
     <p><a href="gridspace-models/index.html">More...</a></p>
    </section>
    <section class="sim-category" id="contin">
-    <h1>Examples of Continuous Simulation</h1>
+    <h2>Examples of Continuous Simulation</h2>
     <p>... with continuous state changes driven by fixed-increment time progression.</p>
     <dl>
       <dt><a href="sims/15/index.html">Solar System</a></dt><dd>Implemented with CSS 3D animations.</dd>
@@ -81,7 +81,7 @@ lang: en
     <p><a href="continuous-models/index.html">More...</a></p>
    </section>
   </main>
-  <aside><h1>News...</h1>
+  <aside><h2>News...</h2>
    <ul>
     <li>8-Apr-2019: We are looking for <strong>volunteer translators</strong> to Spanish, Brazilian, French or any language you'd like to support. 
 	 Please <a href="mailto:G.Wagner@b-tu.de?subject=Sim4edu%20Translation&body=Hi%20guys!%0D%0AI'd%20like%20to%20help%20with%20translating%20Sim4edu%20to%20...">contact us</a> 
