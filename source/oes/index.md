@@ -1,7 +1,8 @@
 ---
 layout: area-page
 title: Object Event Modeling And Simulation
-desc: About Object Event Modeling and Simulation, a general Discrete Event Simulation approach.
+metatitle: Object Event Modeling And Simulation
+metadesc: About Object Event Modeling and Simulation, a general Discrete Event Simulation approach.
 ---
 <aside>
 <h3>Papers</h3>

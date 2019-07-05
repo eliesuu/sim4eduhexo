@@ -1,7 +1,8 @@
 ---
 layout: description
 title: A Single Service Desk Queueing System Model with Utilization and Maximum Queue Length Statistics
-desc: A service queue model (one service and one queue) with two statistics maximum queue length and service utilization. For simplicity, the model uses abstract (discrete) time and abstracts away from individual customers and from the composition of the queue, which is only represented in terms of its length. The model includes one object type ServiceDesk, and two event types Customer Arrival and CustomerDeparture. Both the random time variable for the recurrence of customer arrival events and the random time variable for modeling the duration of services are discrete.
+metatitle: A Single Service Desk Queueing System Model with Utilization and Maximum Queue Length Statistics
+metadesc: A service queue model (one service and one queue) with two statistics maximum queue length and service utilization. For simplicity, the model uses abstract (discrete) time and abstracts away from individual customers and from the composition of the queue, which is only represented in terms of its length. The model includes one object type ServiceDesk, and two event types Customer Arrival and CustomerDeparture. Both the random time variable for the recurrence of customer arrival events and the random time variable for modeling the duration of services are discrete.
 ---
   <section class="mbd collapsed"><h1><span>►</span>Conceptual Model <sup class="expl-req">?</sup></h1>
    <div id="expl-CM" class="expl"></div>
