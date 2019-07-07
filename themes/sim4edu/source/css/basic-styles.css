@@ -108,13 +108,6 @@ header img{
 	margin:10px;
 }
 
-aside h1 {
-    margin: -10px -10px 5px -10px;
-    background: #FF6600;
-    padding: 10px 10px 5px 20px;
-    color: #FFF;
-    font: bold 20px sans-serif
-}
 aside ul {
   margin: -5px -10px 0px -10px;
 }
@@ -174,7 +167,7 @@ h1 {
 }
 
 nav > h1,
-aside > h1
+aside > h2,
 section.sim-category > h1 {
   font-size: 90%;
 }

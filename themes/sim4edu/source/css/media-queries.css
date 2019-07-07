@@ -32,9 +32,9 @@
   
   /*View above 900px*/
   @media (min-width: 900px) {
-    header {padding:10px 40px 10px 40px;}
+   header {padding:10px 40px 10px 40px;}
    nav {position:relative;float:right;max-width:65%;padding:5px 40px 0px 0px;margin-right:10px;} 
-   aside h1, nav, .description h1{font-size:110%}
+   aside h2, nav, .description h1 {font-size:110%}
    #between-head-and-foot {display: flex;}
    aside {order: 1;width: 25%;}
    #language{width:13%}
@@ -45,8 +45,8 @@
   @media (min-width: 1200px) {
    nav {padding:0px 0px 50px 0px;margin-top:10px;}
    header img {max-height:80px;} 
-   .sim-category a, aside li, section.sim-category > h1,p,dt,dd  {font-size:110%}
-   nav, aside h1, .description h1 {font-size:120%}
+   .sim-category a, aside li, section.sim-category > h1, section.sim-category > h2,p,dt,dd  {font-size:110%}
+   nav, aside h2, .description h1 {font-size:120%}
    section.description > div {columns: 2;}
    aside {width: 20%;}
    #slogan {font-size:1.1em;margin: 10px 30px 10px 30px;}
@@ -56,8 +56,8 @@
   @media (min-width: 1800px) {
    header img {max-height:100px;} 
    nav {padding-right:0px;}
-   aside, #language, ection.sim-category > h1,p,dt,dd, {font-size:130%}
-   nav, .description h1,h1 {font-size:170%}
+   aside, #language, section.sim-category > h1, section.sim-category > h2,p,dt,dd, {font-size:130%}
+   nav, .description h1,.description h2 {font-size:170%}
    #language svg{width:25px;}
    body img {width:20%;}
    #slogan {font-size:1.5em;width:55%;} 
@@ -68,8 +68,8 @@
    header img {max-height:150px;} 
    nav{height:70px;}
    nav li:nth-last-child(1) {display: none;}
-   nav, .description h1,h1 {font-size:250%}
-   aside, section.sim-category > h1,p,dt,dd,#language  {font-size:200%}
+   nav, .description h1, .description h1 {font-size:250%}
+   aside, section.sim-category > h1,section.sim-category > h2,p,dt,dd,#language  {font-size:200%}
    #language svg{width:40px;}
    #slogan {font-size:3em;margin: 10px 50px 10px 50px;width:60%} 
   

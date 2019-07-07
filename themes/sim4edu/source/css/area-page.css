@@ -14,11 +14,11 @@ main > aside {
 main > section {
   margin-bottom: 0.8em;
 }
-main > section > h1 {
+main > section > h1, main > section > h2 {
   font-size: 1.7em;
   margin-bottom: 0.2em;
 }
-main > section > section > h1 {
+main > section > section > h1, main > section > section > h2 {
   font-size: 1.5em;
   margin-bottom: 0.2em;
 }
