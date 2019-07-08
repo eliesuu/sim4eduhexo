@@ -1,8 +1,11 @@
 ---
 layout: area-page
 title: Object Event Modeling And Simulation
-metatitle: Object Event Modeling And Simulation - OESjs  | sim4edu.com
+metatitle: Object Event Modeling And Simulation - OESjs | sim4edu.com
 metadesc: About Object Event Modeling and Simulation, a general Discrete Event Simulation approach. Sim4edu provides the OESjs simulation framework.
+ogtitle:  Object Event Modeling And Simulation - OESjs simulation framework | sim4edu.com
+ogdesc: About Object Event Modeling and Simulation, a general Discrete Event Simulation approach. Sim4edu provides the OESjs simulation framework.
+ogimg:
 lang: en
 ---
 <aside>

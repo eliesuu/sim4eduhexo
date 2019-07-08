@@ -3,6 +3,9 @@ layout: sims
 title: A Service Queue Model with Utilization and Maximum Queue Length Statistics
 metatitle: Service Queue Model - Utilization & Maximum Queue Length Statistics
 metadesc: A service queue model with two statistics maximum queue length and service utilization. The model uses abstract time & abstracts away from individual customers 
+ogtitle: A Service Queue Model with Utilization and Maximum Queue Length Statistics
+ogdesc: A service queue model with two statistics maximum queue length and service utilization. The model uses abstract time & abstracts away from individual customers 
+ogimg:
 lang: en
 ---
  <div id="model-menu">

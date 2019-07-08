@@ -1,6 +1,9 @@
 ---
-metatitle: Sim4edu - Web-Based Simulation for Science and Education
+metatitle: Sim4edu - Web-Based Simulation for Science and Education | sim4edu.com
 metadesc: The Simulation for Education (sim4edu.com) project website supports web-based simulation with open source technologies for science and education.
+ogtitle: Sim4edu - Web-Based Simulation for Science and Education | sim4edu.com
+ogdesc: The Simulation for Education (sim4edu.com) project website supports web-based simulation with open source technologies for science and education.
+ogimg: /img/sim4edu.png
 lang: en
 ---
 <main>
