@@ -5,7 +5,7 @@ metatitle: Single Service Desk Queueing System Model | sim4edu.com
 metadesc: A service queue model with two statistics maximum queue length and service utilization. The model uses abstract time & abstracts away from individual customers
 ogtitle: Single Service Desk Queueing System Model | Two statistics | sim4edu.com
 ogdesc: A service queue model with two statistics maximum queue length and service utilization. The model uses abstract time & abstracts away from individual customers
-ogimg: ../../img/sim4edu.png
+ogimg: https://sim4eduhexo.netlify.com/img/sim4edu.png
 lang: en
 ---
   <section class="mbd collapsed"><h2><span>►</span>Conceptual Model <sup class="expl-req">?</sup></h2>
